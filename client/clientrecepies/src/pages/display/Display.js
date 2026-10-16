@@ -452,11 +452,11 @@ function Display() {
             </div>
           </div>
           {trace.length > 0 && (
-            <details className="instructionscontainer reasoning">
+            <details className="instructionscontainer reasoning" open>
               <summary className="instructionstitle">Why this recipe?</summary>
               <ul className="list">
                 {trace.map(step => (
-                  <li key={step}>{step}</li>
+                  <li key={step}>{formatTitle(step)}</li>
                 ))}
               </ul>
             </details>
