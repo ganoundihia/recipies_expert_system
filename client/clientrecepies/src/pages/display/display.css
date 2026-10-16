@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap');
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.displaycontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 111px;
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.displaycontainer .container{
+    background-color: #FFECEE;
+    height: 51vh;
+    position: relative;
+
+
+}
+.displaycontainer .leaf{
+    position: absolute;
+}
+.displaycontainer .leaf img{
+    width: 61px;
+    height: 116px;
+}
+
+.displaycontainer .imagebg{
+    height: 14vh;
+    background-image: url(../Home/pics/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.displaycontainer .container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 497px;
+    position: relative;
+
+}
+
+.displaycontainer .container .content .bluebery{
+    position: absolute;
+    top: -141%;
+    right: -23%;
+}
+.displaycontainer .bluebery img{
+    width: 135px;
+    height: 143px;
+    transition: opacity 1s ease;
+    transform: translate(-54px, -50px);
+}
+.displaycontainer .content .writing{
+    z-index: 55;
+    margin-top: -9px;
+
+}
+.displaycontainer .content .writing .title{
+    position: relative;
+    
+
+}
+.displaycontainer .content .writing .title .text{
+    font-size: 60px;
+    color: #964262;
+    transform: translate(-91px, -61px);
+}
+.displaycontainer .content .images{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    height: 232px;  
+}
+.displaycontainer .macaron{
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+.displaycontainer .macaron img {
+    height: 274px;
+    width: 258px;
+}
+
+  
+.displaycontainer .ingredientcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.displaycontainer .ingredientcontainer .ingredient{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 457px;
+}
+.ingredientcontainer .sideimage img{
+    /* height: 415px; */
+    height: 445px;
+    width: 284px;
+}
+.ingredient .ingredienttitle, .instructionscontainer .instructionstitle{
+    font-size: 55px;
+    color: #964262;
+}
+.ingredientcontainer .list, .instructionscontainer .list{
+    font-size: 34px;
+}
+
+.instructionscontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 88px;
+}
+.instructionscontainer .list ol li{
+    width: fit-content;
+    padding-left: 20px;
+}
+.displaycontainer .button{
+    cursor: pointer;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+}
+.displaycontainer .reasoning{
+    padding-bottom: 60px;
+}
+.displaycontainer .reasoning summary{
+    cursor: pointer;
+    font-size: 40px;
+}
+.displaycontainer .reasoning .list{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #555;
+}
+.displaycontainer .button button{
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    background-color: transparent;
+    height: 42px;
+    width: 187px;
+    border-radius: 7px;
+    background-color: #964262;
+    color: white;
+    margin-top: 12px;
+    font-size: 23px;
+    transition: opacity 1s ease;
+
+}
+.displaycontainer .button button:hover{
+    background-color: #FFECEE;
+    color: #964262;
+    border-color: #964262;
+}
+
+.displaycontainer footer{
+    background-color: #FFECEE;
+    font-size: 25px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 0 0;
+}
+.displaycontainer footer img{
+    width: 22px;
+    margin: 8px 0px 0 12px;
+    transform: rotate(21deg);
+
+}

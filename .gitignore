@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Builds and coverage
+build/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Environment and editor files
+.env
+.env.*.local
+.claude/
+.vscode/
+.idea/
+.DS_Store
+npm-debug.log*

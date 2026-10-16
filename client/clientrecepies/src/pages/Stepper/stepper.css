@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap');
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+.steppercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.steppercontainer .card{
+    position: absolute;
+    height: 99vh;
+    width: 100%;
+    background-color: #10101073;
+    top: 0;
+    z-index: 1111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111111;
+}
+.steppercontainer .card2{
+    /* position: absolute;
+    height: 481px;
+    width: 736px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; 
+    background-color: white;
+    border-radius: 13px;
+    top: 11%;
+    z-index: 11111111;
+    gap: 14px; */
+    position: absolute;
+    height: 507px;
+    width: 736px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 13px;
+    top: 9%;
+    z-index: 11111111;
+    gap: 14px;
+}
+.steppercontainer .cercles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 21px;
+    margin-top: 14px;
+}
+.steppercontainer .cardtitle{
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #964262;
+    font-size: 42px;
+    margin-top: 12px;
+
+}
+.steppercontainer .optionscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 147px;
+}
+.steppercontainer .optionscontainer img{
+    width: 31px;
+    height: 60px;
+    cursor: pointer;
+}
+.steppercontainer .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 320px;
+}
+.steppercontainer .next, .prev{
+    /* margin-top: 50px; */
+}
+.steppercontainer .donebutton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 93%;
+    height: 134px;
+}
+.steppercontainer .donebutton button{
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    height: 38px;
+    width: 81px;
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+    background-color: #964262;
+    font-size: 24px;
+    cursor: pointer;
+}
