@@ -205,10 +205,29 @@ METRICS = {
     "pantry_f1": ("Pantry extraction F1", "Ingredients understood from the text vs. the true pantry.", "higher", "number"),
     "constraint_recall": ("Constraint recall", "Share of stated diets/allergies the parser captured.", "higher", "percent"),
     "ungrounded_text_caught_rate": ("Ungrounded LLM text caught", "Generated answers rejected by the verifier and replaced by a safe template.", "lower", "percent"),
-    "error_rate": ("Errors", "Requests that failed (API error, invalid output).", "lower", "percent"),
+    "error_rate": ("Errors", "Requests that failed for infrastructure reasons (free-tier rate limits, network) and are excluded from the other metrics.", "lower", "percent"),
     "latency_p50_ms": ("Latency p50", "Median end-to-end time per request.", "lower", "ms"),
     "latency_p95_ms": ("Latency p95", "95th percentile end-to-end time.", "lower", "ms"),
 }
+
+
+def _run_one(name: str, chef: PantryChef, client: OpenAICompatibleClient, settings, kb: KnowledgeBase, expert: ExpertSystem, text: str, truth: UserRequest) -> dict:
+    """Run one system on one case and judge it against the ground truth."""
+    started, waited = time.perf_counter(), client.waited_s
+    try:
+        if name == "rules_only":  # Keyword parser + expert system, no LLM at all.
+            parsed = parse_keywords(text, chef.matcher)
+            return {**judge_engine_answer(expert, truth, parsed, expert.recommend(parsed)), **_timing(started, waited, client)}
+        if name == "llm_only":  # The model picks from the full catalog itself.
+            return {**run_llm_only(client, settings.narrate_model, kb, expert, text, truth), **_timing(started, waited, client)}
+        # Hybrid: guard + LLM parsing + expert system + verified narration.
+        out = chef.ask(AskRequest(text=text, lang=truth.lang))
+        parsed = UserRequest.model_validate(out["request"])
+        record = judge_engine_answer(expert, truth, parsed, expert.recommend(parsed))
+        record["narration_rejected"] = out["answer"]["source"] == "template" and bool(out["answer"]["violations"])
+        return {**record, **_timing(started, waited, client)}
+    except LLMError as error:
+        return {"error": str(error), **_timing(started, waited, client)}
 
 
 def main() -> None:
@@ -216,47 +235,32 @@ def main() -> None:
     parser.add_argument("--cases", type=int, default=40)
     parser.add_argument("--seed", type=int, default=11)
     parser.add_argument("--systems", default="llm_only,rules_only,hybrid", help="comma-separated; others are kept from the previous results.json")
+    parser.add_argument("--retry-errors", action="store_true", help="only re-run cases that previously failed (rate limits, network)")
     args = parser.parse_args()
-    selected = set(args.systems.split(","))
+    selected = [name for name in ("rules_only", "llm_only", "hybrid") if name in args.systems.split(",")]
 
     settings = get_settings()
     if not settings.llm_api_key:
         raise SystemExit("LLM_API_KEY is required to run the LLM and hybrid systems.")
     kb = load_seed_kb()
     expert = ExpertSystem(kb)
-    client = OpenAICompatibleClient(settings.llm_base_url, settings.llm_api_key, timeout=90, max_retries=8)
+    client = OpenAICompatibleClient(settings.llm_base_url, settings.llm_api_key, timeout=90, max_retries=12)
     chef = PantryChef(kb, settings, client)
     truths = synthetic_requests(kb, args.cases, seed=args.seed)
     previous = json.loads(OUT.read_text(encoding="utf-8"))["cases_detail"] if OUT.exists() else {}
-    results: dict[str, list[dict]] = {name: [] if name in selected else previous.get(name, []) for name in ("llm_only", "rules_only", "hybrid")}
+    results: dict[str, list[dict]] = {name: previous.get(name, []) if args.retry_errors or name not in selected else [] for name in ("llm_only", "rules_only", "hybrid")}
 
     for index, truth in enumerate(truths, start=1):
         text = render(truth, kb)
-        if "rules_only" in selected:  # Keyword parser + expert system, no LLM at all.
-            started = time.perf_counter()
-            parsed = parse_keywords(text, chef.matcher)
-            record = judge_engine_answer(expert, truth, parsed, expert.recommend(parsed))
-            results["rules_only"].append({**record, "latency_ms": (time.perf_counter() - started) * 1000})
-
-        if "llm_only" in selected:  # The model picks from the full catalog itself.
-            started, waited = time.perf_counter(), client.waited_s
-            try:
-                record = run_llm_only(client, settings.narrate_model, kb, expert, text, truth)
-            except LLMError as error:
-                record = {"error": str(error)}
-            results["llm_only"].append({**record, **_timing(started, waited, client)})
-
-        if "hybrid" in selected:  # Guard + LLM parsing + expert system + verified narration.
-            started, waited = time.perf_counter(), client.waited_s
-            try:
-                out = chef.ask(AskRequest(text=text, lang=truth.lang))
-                parsed = UserRequest.model_validate(out["request"])
-                record = judge_engine_answer(expert, truth, parsed, expert.recommend(parsed))
-                record["narration_rejected"] = out["answer"]["source"] == "template" and bool(out["answer"]["violations"])
-            except LLMError as error:
-                record = {"error": str(error)}
-            results["hybrid"].append({**record, **_timing(started, waited, client)})
-        print(f"[{index}/{len(truths)}] {truth.lang} " + " | ".join(f"{k}: {results[k][-1].get('recipe')}" for k in selected), flush=True)
+        for name in selected:
+            if args.retry_errors:
+                if "error" in results[name][index - 1]:
+                    results[name][index - 1] = _run_one(name, chef, client, settings, kb, expert, text, truth)
+                    print(f"[{index}] retried {name}: {results[name][index - 1].get('recipe') or results[name][index - 1].get('error')}", flush=True)
+            else:
+                results[name].append(_run_one(name, chef, client, settings, kb, expert, text, truth))
+        if not args.retry_errors:
+            print(f"[{index}/{len(truths)}] {truth.lang} " + " | ".join(f"{k}: {results[k][-1].get('recipe')}" for k in selected), flush=True)
 
     report = {
         "generated_at": datetime.now(UTC).isoformat(),
@@ -270,6 +274,8 @@ def main() -> None:
             "LLM only receives the full catalog with ingredient lists and must respect diets itself; its declared substitutions are honored when judging.",
             "Rules only uses the deterministic keyword parser; hybrid uses the LLM for parsing and narration, the expert system for every decision.",
             "Shopping-list accuracy compares declared missing items with what the user truly lacks, so parsing mistakes are penalized.",
+            "LLM only sends the whole catalog (about 3k tokens) per request, so on Groq's free tier part of its requests exhausted "
+            "the rate limit even after retries; its metrics cover the requests that completed.",
             "Latencies exclude the backoff imposed by Groq's free-tier rate limits (measured and stored separately as throttle_wait_ms).",
         ],
         "cases_detail": {name: records for name, records in results.items()},

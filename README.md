@@ -32,22 +32,23 @@ answers, and gives every decision to a transparent rule engine:
 
 | Metric | LLM only | Rules only | Hybrid (Pantry Chef) |
 |---|---:|---:|---:|
-| Diet / allergy violations | 20.0% | **0.0%** | **0.0%** |
-| Invented recipes | 2.5% | **0.0%** | **0.0%** |
-| Honest shopping list | 32.5% | 75.0% | **92.5%** |
-| Craving satisfied | **85.7%** | 68.6% | 60.0% |
-| Pantry extraction F1 | n/a | 0.954 | **0.971** |
+| Diet / allergy violations | 28.1% | **0.0%** | **0.0%** |
+| Invented recipes | **0.0%** | **0.0%** | **0.0%** |
+| Honest shopping list | 28.1% | 75.0% | **92.5%** |
+| Craving satisfied | **78.6%** | 68.6% | 60.0% |
+| Pantry extraction F1 | n/a | 0.954 | **0.976** |
 | Constraint recall | n/a | 96.9% | **100.0%** |
 | Ungrounded LLM text caught | n/a | n/a | 2.5% |
-| Errors | **0.0%** | **0.0%** | **0.0%** |
-| Latency p50 | 8.2 s | **23 ms** | 233.2 s |
-| Latency p95 | 21.1 s | **82 ms** | 468.0 s |
+| Errors | 20.0% | **0.0%** | **0.0%** |
+| Latency p50 | 2.1 s | **23 ms** | 2.0 s |
+| Latency p95 | 4.1 s | **82 ms** | 2.9 s |
 
 - Cases are synthetic requests with known ground truth, rendered in English, French and Arabic (seeded, reproducible).
 - LLM only receives the full catalog with ingredient lists and must respect diets itself; its declared substitutions are honored when judging.
 - Rules only uses the deterministic keyword parser; hybrid uses the LLM for parsing and narration, the expert system for every decision.
 - Shopping-list accuracy compares declared missing items with what the user truly lacks, so parsing mistakes are penalized.
-- Latencies were measured on Groq's free tier and include rate-limit waits; the expert system itself answers in milliseconds.
+- Latencies exclude the backoff imposed by Groq's free-tier rate limits (measured and stored separately as throttle_wait_ms).
+- LLM only sends the whole catalog (about 3k tokens) per request, so on Groq's free tier part of its requests exhausted the rate limit even after retries; its metrics cover the requests that completed.
 <!-- BENCHMARK:END -->
 
 ## Features
