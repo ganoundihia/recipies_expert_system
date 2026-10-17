@@ -1,0 +1,3651 @@
+[
+ {
+  "id": "lemon_butter_cookies",
+  "name": {
+   "en": "Lemon Butter Cookies",
+   "fr": "Biscuits beurre-citron",
+   "ar": "بسكويت الزبدة بالليمون"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 24,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "butter",
+    "qty": 225
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 60
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a baking sheet with parchment paper.",
+   "Cream the softened butter and powdered sugar until light and fluffy.",
+   "Mix in the lemon or orange extract, then gradually add the flour and salt until a soft dough forms.",
+   "Roll the dough into small balls, place them on the sheet and flatten each one slightly with a fork.",
+   "Bake for 12 to 15 minutes, until the edges are lightly golden.",
+   "Let the cookies rest on the sheet for 5 minutes, then cool completely on a wire rack."
+  ]
+ },
+ {
+  "id": "vanilla_butter_pound_cake",
+  "name": {
+   "en": "Vanilla Pound Cake",
+   "fr": "Quatre-quarts à la vanille",
+   "ar": "كيك الفانيليا بالزبدة"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 80,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "butter",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "milk",
+    "qty": 60
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9x5-inch loaf pan.",
+   "Cream the butter and sugar until pale and fluffy, about 4 minutes.",
+   "Beat in the eggs one at a time, then the vanilla extract.",
+   "Whisk the flour with the baking powder and fold it in, alternating with the milk.",
+   "Pour into the pan and bake for 55 to 65 minutes, until a toothpick comes out clean.",
+   "Cool in the pan for 10 minutes, then turn out onto a wire rack."
+  ]
+ },
+ {
+  "id": "coffee_crumb_cake",
+  "name": {
+   "en": "Coffee Crumb Cake",
+   "fr": "Gâteau au café et crumble",
+   "ar": "كيك القهوة بالكرامبل"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "coffee",
+   "spice"
+  ],
+  "time_minutes": 55,
+  "difficulty": "medium",
+  "servings": 9,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   },
+   {
+    "id": "milk",
+    "qty": 120
+   },
+   {
+    "id": "cinnamon",
+    "qty": 3
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease an 8-inch square pan.",
+   "Rub 1/2 cup flour, 1/4 cup sugar and 3 tablespoons butter together to make a crumb topping.",
+   "Cream the remaining butter and sugar, then beat in the eggs and coffee extract.",
+   "Fold in the remaining flour, baking powder and cinnamon, alternating with the milk.",
+   "Spread the batter in the pan and scatter the crumb topping over it.",
+   "Bake for 35 to 40 minutes, until golden and set in the center."
+  ]
+ },
+ {
+  "id": "lemon_drizzle_muffins",
+  "name": {
+   "en": "Lemon Drizzle Muffins",
+   "fr": "Muffins glacés au citron",
+   "ar": "مافن الليمون"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 180
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 60
+   },
+   {
+    "id": "water",
+    "qty": 15
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 375°F (190°C) and line a 12-cup muffin tin.",
+   "Whisk the oil, sugar, eggs, milk and lemon or orange extract together.",
+   "Stir the flour and baking powder in just until combined; a few lumps are fine.",
+   "Divide the batter between the cups and bake for 18 to 20 minutes.",
+   "Mix the powdered sugar with the water and drizzle it over the warm muffins."
+  ]
+ },
+ {
+  "id": "simple_vanilla_cake",
+  "name": {
+   "en": "Simple Vanilla Cake",
+   "fr": "Gâteau simple à la vanille",
+   "ar": "كيك الفانيليا البسيط"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 8,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9-inch round pan.",
+   "Whisk the eggs and sugar until pale, then whisk in the oil, milk and vanilla extract.",
+   "Fold in the flour, baking powder and salt until smooth.",
+   "Pour into the pan and bake for 30 to 35 minutes, until a toothpick comes out clean.",
+   "Cool for 10 minutes in the pan, then on a wire rack."
+  ]
+ },
+ {
+  "id": "coffee_oil_cupcakes",
+  "name": {
+   "en": "Coffee Cupcakes",
+   "fr": "Cupcakes au café",
+   "ar": "كب كيك القهوة"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 190
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 120
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a 12-cup muffin tin.",
+   "Whisk the oil, sugar, eggs, milk and coffee extract together.",
+   "Stir in the flour and baking powder until just smooth.",
+   "Fill the cups two-thirds full and bake for 18 to 22 minutes.",
+   "Cool completely before frosting, for example with a coffee buttercream."
+  ]
+ },
+ {
+  "id": "citrus_shortbread_cookies",
+  "name": {
+   "en": "Citrus Shortbread Cookies",
+   "fr": "Sablés aux agrumes",
+   "ar": "صابلي الحمضيات"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 45,
+  "difficulty": "easy",
+  "servings": 20,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 60
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C).",
+   "Beat the margarine and powdered sugar until smooth, then add the lemon or orange extract.",
+   "Mix in the flour and salt until the dough just comes together.",
+   "Roll out to 1/4 inch thick, cut into shapes and place on a lined baking sheet.",
+   "Chill for 15 minutes, then bake for 15 to 18 minutes, until the edges just start to color."
+  ]
+ },
+ {
+  "id": "vanilla_ermine_frosting",
+  "name": {
+   "en": "Vanilla Ermine Frosting",
+   "fr": "Crème au beurre à la farine (ermine)",
+   "ar": "كريمة الفانيليا بالمرغرين"
+  },
+  "cuisine": "international",
+  "category": "frosting",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 30,
+  "difficulty": "medium",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 25
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 5
+   }
+  ],
+  "steps": [
+   "Whisk the flour into the milk in a saucepan and cook over medium heat, stirring, until thick like pudding.",
+   "Transfer to a bowl, cover the surface with plastic wrap and let it cool completely.",
+   "Beat the margarine and sugar until very light and the sugar is mostly dissolved, about 5 minutes.",
+   "Add the cooled flour paste one spoonful at a time, beating well after each addition.",
+   "Beat in the vanilla extract; the frosting should be silky and pipeable. Use it on cakes or cupcakes."
+  ]
+ },
+ {
+  "id": "coffee_shortbread",
+  "name": {
+   "en": "Coffee Shortbread",
+   "fr": "Sablés au café",
+   "ar": "صابلي القهوة"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 16,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 100
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C).",
+   "Cream the margarine and brown sugar, then beat in the coffee extract.",
+   "Mix in the flour and salt to form a firm dough.",
+   "Press into an 8-inch square pan, prick all over with a fork and score into fingers.",
+   "Bake for 30 to 35 minutes, then cut along the scores while still warm."
+  ]
+ },
+ {
+  "id": "citrus_madeleines",
+  "name": {
+   "en": "Citrus Madeleines",
+   "fr": "Madeleines aux agrumes",
+   "ar": "مادلين بالحمضيات"
+  },
+  "cuisine": "french",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 90,
+  "difficulty": "medium",
+  "servings": 24,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 125
+   },
+   {
+    "id": "butter",
+    "qty": 115
+   },
+   {
+    "id": "sugar",
+    "qty": 130
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "baking_powder",
+    "qty": 2
+   }
+  ],
+  "steps": [
+   "Whisk the eggs and sugar until thick and pale, about 5 minutes.",
+   "Add the lemon or orange extract, then gently fold in the flour and baking powder.",
+   "Fold in the melted butter, cover and chill the batter for at least 1 hour.",
+   "Preheat your oven to 375°F (190°C) and butter and flour a madeleine pan.",
+   "Fill each shell three-quarters full and bake for 9 to 11 minutes, until the humps rise and the edges are golden."
+  ]
+ },
+ {
+  "id": "vanilla_butter_cupcakes",
+  "name": {
+   "en": "Vanilla Butter Cupcakes",
+   "fr": "Cupcakes vanille au beurre",
+   "ar": "كب كيك الفانيليا بالزبدة"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 190
+   },
+   {
+    "id": "butter",
+    "qty": 115
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 120
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a 12-cup muffin tin.",
+   "Cream the butter and sugar until fluffy, then beat in the eggs and vanilla extract.",
+   "Fold in the flour and baking powder, alternating with the milk.",
+   "Fill the cups two-thirds full and bake for 18 to 20 minutes.",
+   "Cool completely before frosting."
+  ]
+ },
+ {
+  "id": "coffee_layer_cake",
+  "name": {
+   "en": "Coffee Layer Cake",
+   "fr": "Layer cake au café",
+   "ar": "كيك طبقات القهوة"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 60,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 250
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 160
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease two 8-inch round pans.",
+   "Cream the butter and sugar, then beat in the eggs one at a time and the coffee extract.",
+   "Fold in the flour and baking powder, alternating with the milk.",
+   "Divide between the pans and bake for 25 to 30 minutes.",
+   "Cool, then sandwich and cover the layers with coffee buttercream."
+  ]
+ },
+ {
+  "id": "citrus_olive_oil_cake",
+  "name": {
+   "en": "Citrus Olive Oil Cake",
+   "fr": "Gâteau aux agrumes à l'huile d'olive",
+   "ar": "كيك الحمضيات بزيت الزيتون"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 60,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 220
+   },
+   {
+    "id": "olive_oil",
+    "qty": 160
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 180
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9-inch round pan.",
+   "Whisk the eggs and sugar until pale, then stream in the oil while whisking.",
+   "Whisk in the milk and lemon or orange extract.",
+   "Fold in the flour and baking powder until smooth.",
+   "Bake for 40 to 45 minutes and dust with powdered sugar once cool."
+  ]
+ },
+ {
+  "id": "vanilla_oil_cupcakes",
+  "name": {
+   "en": "Vanilla Cupcakes",
+   "fr": "Cupcakes à la vanille",
+   "ar": "كب كيك الفانيليا"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 190
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 160
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a 12-cup muffin tin.",
+   "Whisk the oil, sugar, eggs, milk and vanilla extract together.",
+   "Whisk in the flour and baking powder until smooth.",
+   "Fill the cups two-thirds full and bake for 17 to 20 minutes.",
+   "These stay moist for days; frost once completely cool."
+  ]
+ },
+ {
+  "id": "brown_sugar_coffee_cupcakes",
+  "name": {
+   "en": "Brown Sugar Coffee Cupcakes",
+   "fr": "Cupcakes café et sucre roux",
+   "ar": "كب كيك القهوة بالسكر البني"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 190
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "milk",
+    "qty": 160
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a 12-cup muffin tin.",
+   "Whisk the oil, brown sugar, eggs, milk and coffee extract together.",
+   "Whisk in the flour and baking powder until smooth.",
+   "Fill the cups two-thirds full and bake for 18 to 20 minutes.",
+   "Top with a mocha or vanilla frosting once cool."
+  ]
+ },
+ {
+  "id": "citrus_pound_cake",
+  "name": {
+   "en": "Citrus Pound Cake",
+   "fr": "Cake aux agrumes",
+   "ar": "كيك الحمضيات"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 85,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 250
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "milk",
+    "qty": 60
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and sugar until light, about 4 minutes.",
+   "Beat in the eggs one at a time, then the lemon or orange extract.",
+   "Fold in the flour and baking powder, alternating with the milk.",
+   "Bake for 60 to 70 minutes, until a toothpick comes out clean, then cool on a rack."
+  ]
+ },
+ {
+  "id": "vanilla_margarine_pound_cake",
+  "name": {
+   "en": "Vanilla Margarine Pound Cake",
+   "fr": "Cake vanille à la margarine",
+   "ar": "كيك الفانيليا بالمرغرين"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 85,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 250
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "milk",
+    "qty": 60
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and sugar until light, about 4 minutes.",
+   "Beat in the eggs one at a time, then the vanilla extract.",
+   "Fold in the flour and baking powder, alternating with the milk.",
+   "Bake for 60 to 70 minutes, until a toothpick comes out clean, then cool on a rack."
+  ]
+ },
+ {
+  "id": "coffee_pound_cake",
+  "name": {
+   "en": "Coffee Pound Cake",
+   "fr": "Cake au café",
+   "ar": "كيك القهوة"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 85,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cake_flour",
+    "qty": 250
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "milk",
+    "qty": 60
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and brown sugar until light, about 4 minutes.",
+   "Beat in the eggs one at a time, then the coffee extract.",
+   "Fold in the flour and baking powder, alternating with the milk.",
+   "Bake for 60 to 70 minutes, until a toothpick comes out clean, then cool on a rack."
+  ]
+ },
+ {
+  "id": "semolina_lemon_cookies",
+  "name": {
+   "en": "Semolina Lemon Cookies",
+   "fr": "Biscuits à la semoule et au citron",
+   "ar": "بسكويت السميد بالليمون"
+  },
+  "cuisine": "mediterranean",
+  "category": "cookie",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 55,
+  "difficulty": "easy",
+  "servings": 24,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 255
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 60
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 60
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "baking_powder",
+    "qty": 2
+   }
+  ],
+  "steps": [
+   "Cream the butter and powdered sugar, then add the lemon or orange extract.",
+   "Mix in the semolina, flour and baking powder and let the dough rest for 30 minutes.",
+   "Preheat your oven to 350°F (175°C) and line a baking sheet.",
+   "Shape into walnut-sized balls and flatten them slightly.",
+   "Bake for 15 to 18 minutes, until pale golden underneath."
+  ]
+ },
+ {
+  "id": "semolina_syrup_cake",
+  "name": {
+   "en": "Semolina Syrup Cake",
+   "fr": "Gâteau de semoule au sirop",
+   "ar": "كيك السميد بالشربات"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 60,
+  "difficulty": "medium",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 255
+   },
+   {
+    "id": "butter",
+    "qty": 115
+   },
+   {
+    "id": "sugar",
+    "qty": 350
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "yogurt",
+    "qty": 240
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   },
+   {
+    "id": "water",
+    "qty": 180
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease an 8-inch square pan.",
+   "Whisk the eggs and sugar, then add the yogurt, melted butter and vanilla extract.",
+   "Stir in the semolina and baking powder and let the batter rest for 15 minutes.",
+   "Bake for 30 to 35 minutes, until golden.",
+   "Meanwhile simmer the sugar and water for 5 minutes, then pour the warm syrup over the hot cake and let it soak in."
+  ]
+ },
+ {
+  "id": "semolina_coffee_biscotti",
+  "name": {
+   "en": "Semolina Coffee Biscotti",
+   "fr": "Biscotti café et semoule",
+   "ar": "بيسكوتي السميد بالقهوة"
+  },
+  "cuisine": "mediterranean",
+  "category": "cookie",
+  "flavors": [
+   "coffee",
+   "nutty"
+  ],
+  "time_minutes": 75,
+  "difficulty": "medium",
+  "servings": 24,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 170
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 125
+   },
+   {
+    "id": "butter",
+    "qty": 55
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "almonds",
+    "qty": 70,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and line a baking sheet.",
+   "Whisk the eggs, sugar, melted butter and coffee extract together.",
+   "Stir in the semolina, flour, baking powder and almonds to make a sticky dough.",
+   "Shape into two logs and bake for 25 minutes; cool for 10 minutes.",
+   "Slice diagonally 1/2 inch thick and bake the slices for 10 minutes per side, until dry and crisp."
+  ]
+ },
+ {
+  "id": "semolina_citrus_cake",
+  "name": {
+   "en": "Semolina Citrus Cake",
+   "fr": "Gâteau de semoule aux agrumes",
+   "ar": "كيك السميد بالحمضيات"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 55,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 255
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 60
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 180
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9-inch round pan.",
+   "Whisk the eggs and sugar, then whisk in the oil, milk and lemon or orange extract.",
+   "Stir in the semolina, flour and baking powder and let the batter rest for 10 minutes.",
+   "Bake for 35 to 40 minutes, until golden and springy.",
+   "Brush with a little citrus syrup or dust with powdered sugar."
+  ]
+ },
+ {
+  "id": "semolina_vanilla_cake",
+  "name": {
+   "en": "Semolina Vanilla Cake",
+   "fr": "Gâteau de semoule à la vanille",
+   "ar": "كيك السميد بالفانيليا"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 55,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 255
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 60
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9-inch round pan.",
+   "Whisk the eggs and sugar, then whisk in the oil, milk and vanilla extract.",
+   "Stir in the semolina, flour and baking powder and let the batter rest for 10 minutes.",
+   "Bake for 35 to 40 minutes, until a toothpick comes out clean.",
+   "Cool in the pan for 10 minutes before unmolding."
+  ]
+ },
+ {
+  "id": "semolina_coffee_cake",
+  "name": {
+   "en": "Semolina Coffee Cake",
+   "fr": "Gâteau de semoule au café",
+   "ar": "كيك السميد بالقهوة"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 55,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 255
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 60
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 350°F (175°C) and grease a 9-inch round pan.",
+   "Whisk the eggs and brown sugar, then whisk in the oil, milk and coffee extract.",
+   "Stir in the semolina, flour and baking powder and let the batter rest for 10 minutes.",
+   "Bake for 35 to 40 minutes, until a toothpick comes out clean.",
+   "Serve with a coffee glaze or whipped cream."
+  ]
+ },
+ {
+  "id": "semolina_lemon_pound_cake",
+  "name": {
+   "en": "Semolina Lemon Pound Cake",
+   "fr": "Cake semoule-citron",
+   "ar": "كيك السميد بالليمون"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 80,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 170
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 125
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and sugar until light, then beat in the eggs one at a time.",
+   "Add the lemon or orange extract.",
+   "Fold in the semolina, flour and baking powder.",
+   "Bake for 55 to 65 minutes, until a toothpick comes out clean."
+  ]
+ },
+ {
+  "id": "semolina_vanilla_pound_cake",
+  "name": {
+   "en": "Semolina Vanilla Pound Cake",
+   "fr": "Cake semoule-vanille",
+   "ar": "كيك السميد بالفانيليا والمرغرين"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 80,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 170
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 125
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and sugar until light, then beat in the eggs one at a time.",
+   "Add the vanilla extract.",
+   "Fold in the semolina, flour and baking powder.",
+   "Bake for 55 to 65 minutes, until a toothpick comes out clean."
+  ]
+ },
+ {
+  "id": "semolina_coffee_pound_cake",
+  "name": {
+   "en": "Semolina Coffee Pound Cake",
+   "fr": "Cake semoule-café",
+   "ar": "كيك السميد بالقهوة والمرغرين"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 80,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 170
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 125
+   },
+   {
+    "id": "margarine",
+    "qty": 225
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Preheat your oven to 325°F (165°C) and grease a 9x5-inch loaf pan.",
+   "Cream the margarine and brown sugar until light, then beat in the eggs one at a time.",
+   "Add the coffee extract.",
+   "Fold in the semolina, flour and baking powder.",
+   "Bake for 55 to 65 minutes, until a toothpick comes out clean."
+  ]
+ },
+ {
+  "id": "lemon_brioche_loaf",
+  "name": {
+   "en": "Lemon Brioche Loaf",
+   "fr": "Pain brioché au citron",
+   "ar": "خبز بريوش بالليمون"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 180,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "butter",
+    "qty": 75
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and lemon or orange extract.",
+   "Knead for 8 minutes, then knead in the butter until the dough is smooth and elastic.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Shape into a loaf, place in a greased 9x5-inch pan and let rise for 45 minutes.",
+   "Bake at 350°F (175°C) for 30 to 35 minutes, until golden and hollow-sounding when tapped."
+  ]
+ },
+ {
+  "id": "vanilla_brioche_loaf",
+  "name": {
+   "en": "Vanilla Brioche Loaf",
+   "fr": "Pain brioché à la vanille",
+   "ar": "خبز بريوش بالفانيليا"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 180,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "butter",
+    "qty": 75
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and vanilla extract.",
+   "Knead for 8 minutes, then knead in the butter until the dough is smooth and elastic.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Shape into a loaf, place in a greased 9x5-inch pan and let rise for 45 minutes.",
+   "Bake at 350°F (175°C) for 30 to 35 minutes, until golden and hollow-sounding when tapped."
+  ]
+ },
+ {
+  "id": "coffee_brioche_loaf",
+  "name": {
+   "en": "Coffee Brioche Loaf",
+   "fr": "Pain brioché au café",
+   "ar": "خبز بريوش بالقهوة"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 180,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "butter",
+    "qty": 75
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and coffee extract.",
+   "Knead for 8 minutes, then knead in the butter until the dough is smooth and elastic.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Shape into a loaf, place in a greased 9x5-inch pan and let rise for 45 minutes.",
+   "Bake at 350°F (175°C) for 30 to 35 minutes, until browned and hollow-sounding when tapped."
+  ]
+ },
+ {
+  "id": "citrus_braided_bread",
+  "name": {
+   "en": "Citrus Braided Bread",
+   "fr": "Pain tressé aux agrumes",
+   "ar": "خبز مضفور بالحمضيات"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 60
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "water",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm water, oil, egg and lemon or orange extract.",
+   "Knead for 10 minutes until smooth and elastic.",
+   "Cover and let rise for about 1 hour, until doubled.",
+   "Shape into a braid or loaf, place on a lined sheet or in a pan and let rise for 40 minutes.",
+   "Bake at 350°F (175°C) for 25 to 30 minutes, until golden."
+  ]
+ },
+ {
+  "id": "vanilla_milk_bread",
+  "name": {
+   "en": "Vanilla Milk Bread",
+   "fr": "Pain au lait à la vanille",
+   "ar": "خبز الحليب بالفانيليا"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 60
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, oil, egg and vanilla extract.",
+   "Knead for 10 minutes until smooth and elastic.",
+   "Cover and let rise for about 1 hour, until doubled.",
+   "Shape into a loaf, place in a greased 9x5-inch pan and let rise for 40 minutes.",
+   "Bake at 350°F (175°C) for 30 to 35 minutes, until golden."
+  ]
+ },
+ {
+  "id": "coffee_milk_bread",
+  "name": {
+   "en": "Coffee Milk Bread",
+   "fr": "Pain au lait au café",
+   "ar": "خبز الحليب بالقهوة"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 60
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, oil, egg and coffee extract.",
+   "Knead for 10 minutes until smooth and elastic.",
+   "Cover and let rise for about 1 hour, until doubled.",
+   "Shape into a loaf, place in a greased 9x5-inch pan and let rise for 40 minutes.",
+   "Bake at 350°F (175°C) for 30 to 35 minutes, until well browned."
+  ]
+ },
+ {
+  "id": "lemon_sweet_buns",
+  "name": {
+   "en": "Lemon Sweet Buns",
+   "fr": "Petits pains sucrés au citron",
+   "ar": "خبز حلو بالليمون"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "margarine",
+    "qty": 75
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "lemon_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and lemon or orange extract.",
+   "Knead for 8 minutes, then knead in the margarine until the dough is smooth.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Divide into 12 pieces, roll into buns and let rise on a lined sheet for 40 minutes.",
+   "Bake at 375°F (190°C) for 15 to 18 minutes, until golden."
+  ]
+ },
+ {
+  "id": "vanilla_sweet_buns",
+  "name": {
+   "en": "Vanilla Sweet Buns",
+   "fr": "Petits pains sucrés à la vanille",
+   "ar": "خبز حلو بالفانيليا"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "margarine",
+    "qty": 75
+   },
+   {
+    "id": "sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and vanilla extract.",
+   "Knead for 8 minutes, then knead in the margarine until the dough is smooth.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Divide into 12 pieces, roll into buns and let rise on a lined sheet for 40 minutes.",
+   "Bake at 375°F (190°C) for 15 to 18 minutes, until golden."
+  ]
+ },
+ {
+  "id": "coffee_sweet_buns",
+  "name": {
+   "en": "Coffee Sweet Buns",
+   "fr": "Petits pains sucrés au café",
+   "ar": "خبز حلو بالقهوة"
+  },
+  "cuisine": "international",
+  "category": "bread",
+  "flavors": [
+   "coffee"
+  ],
+  "time_minutes": 150,
+  "difficulty": "medium",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "bread_flour",
+    "qty": 440
+   },
+   {
+    "id": "margarine",
+    "qty": 75
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 65
+   },
+   {
+    "id": "milk",
+    "qty": 240
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dry_yeast",
+    "qty": 7
+   },
+   {
+    "id": "coffee_extract",
+    "qty": 15
+   },
+   {
+    "id": "salt",
+    "qty": 6
+   }
+  ],
+  "steps": [
+   "Mix the flour, sugar, yeast and salt, then add the warm milk, egg and coffee extract.",
+   "Knead for 8 minutes, then knead in the margarine until the dough is smooth.",
+   "Cover and let rise for 1 to 1 1/2 hours, until doubled.",
+   "Divide into 12 pieces, roll into buns and let rise on a lined sheet for 40 minutes.",
+   "Bake at 375°F (190°C) for 15 to 18 minutes, until browned."
+  ]
+ },
+ {
+  "id": "makrout",
+  "name": {
+   "en": "Makrout",
+   "fr": "Makrout",
+   "ar": "المقروط"
+  },
+  "cuisine": "algerian",
+  "category": "pastry",
+  "flavors": [
+   "floral",
+   "spice"
+  ],
+  "time_minutes": 150,
+  "difficulty": "hard",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "coarse_semolina",
+    "qty": 500
+   },
+   {
+    "id": "smen",
+    "qty": 150
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 60
+   },
+   {
+    "id": "water",
+    "qty": 100
+   },
+   {
+    "id": "date_paste",
+    "qty": 300
+   },
+   {
+    "id": "cinnamon",
+    "qty": 2
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 500
+   },
+   {
+    "id": "honey",
+    "qty": 300
+   }
+  ],
+  "steps": [
+   "Rub the melted smen into the semolina with the salt until every grain is coated, then let it rest for 30 minutes.",
+   "Knead the date paste with the cinnamon and a little orange blossom water until soft, and roll it into thin logs.",
+   "Moisten the semolina with the rest of the orange blossom water and the water, gathering it into a dough without kneading.",
+   "Flatten a strip of dough, lay a date log in the middle, close the dough over it and cut into diamonds.",
+   "Fry the diamonds in hot oil until golden, drain them, then dip them in warm honey and let the excess drip off."
+  ]
+ },
+ {
+  "id": "griwech",
+  "name": {
+   "en": "Griwech",
+   "fr": "Griwech",
+   "ar": "القريوش"
+  },
+  "cuisine": "algerian",
+  "category": "pastry",
+  "flavors": [
+   "floral"
+  ],
+  "time_minutes": 180,
+  "difficulty": "hard",
+  "servings": 40,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 500
+   },
+   {
+    "id": "butter",
+    "qty": 125
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "vinegar",
+    "qty": 15
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 60
+   },
+   {
+    "id": "water",
+    "qty": 60
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 500
+   },
+   {
+    "id": "honey",
+    "qty": 400
+   },
+   {
+    "id": "sesame_seeds",
+    "qty": 30
+   }
+  ],
+  "steps": [
+   "Mix the flour, baking powder and salt, then add the melted butter, egg, vinegar, orange blossom water and enough water to make a firm dough.",
+   "Knead for 10 minutes, cover and rest for 30 minutes.",
+   "Roll the dough very thinly, cut rectangles with a fluted wheel and make 4 slits in each one.",
+   "Thread alternate strips over a finger and fold them into the classic braided shape.",
+   "Fry until golden, dip immediately in warm honey and sprinkle with toasted sesame seeds."
+  ]
+ },
+ {
+  "id": "kalb_el_louz",
+  "name": {
+   "en": "Kalb el Louz",
+   "fr": "Kalb el louz",
+   "ar": "قلب اللوز"
+  },
+  "cuisine": "algerian",
+  "category": "cake",
+  "flavors": [
+   "floral",
+   "nutty",
+   "citrus"
+  ],
+  "time_minutes": 300,
+  "difficulty": "medium",
+  "servings": 16,
+  "ingredients": [
+   {
+    "id": "coarse_semolina",
+    "qty": 500
+   },
+   {
+    "id": "sugar",
+    "qty": 600
+   },
+   {
+    "id": "butter",
+    "qty": 125
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 120
+   },
+   {
+    "id": "water",
+    "qty": 520
+   },
+   {
+    "id": "almonds",
+    "qty": 100
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Mix the semolina with 200 g of sugar and the melted butter, rubbing it between your hands until sandy.",
+   "Add 120 ml of water and the orange blossom water, mix, cover and leave to rest for at least 4 hours.",
+   "Spread in a buttered tin, score into diamonds and press half an almond on each.",
+   "Bake at 180°C (350°F) for about 50 minutes, until deep golden.",
+   "Meanwhile boil the remaining sugar and water with lemon juice for 10 minutes, then pour the warm syrup over the hot cake and let it soak overnight."
+  ]
+ },
+ {
+  "id": "mchewek",
+  "name": {
+   "en": "Mchewek",
+   "fr": "Mchewek",
+   "ar": "المشوك"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "nutty",
+   "citrus"
+  ],
+  "time_minutes": 45,
+  "difficulty": "easy",
+  "servings": 25,
+  "ingredients": [
+   {
+    "id": "almond_flour",
+    "qty": 300
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   },
+   {
+    "id": "almonds",
+    "qty": 150
+   },
+   {
+    "id": "apricot_jam",
+    "qty": 50,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Mix the almond flour, sugar, vanilla sugar and lemon zest.",
+   "Add the eggs one at a time until you have a soft, slightly sticky paste.",
+   "Shape walnut-sized balls and roll them in flaked almonds, pressing so they stick.",
+   "Bake on a lined tray at 170°C (340°F) for 15 to 20 minutes, until lightly golden.",
+   "Brush with warmed apricot jam for shine and top each one with a candied cherry if you like."
+  ]
+ },
+ {
+  "id": "ghribia",
+  "name": {
+   "en": "Ghribia",
+   "fr": "Ghribia",
+   "ar": "الغريبية"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 40,
+  "difficulty": "easy",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 500
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 250
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 150
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Whisk the oil with the powdered sugar and vanilla sugar until pale and creamy.",
+   "Add the flour gradually, mixing with your hand, until the dough just holds together and is very soft.",
+   "Shape small balls, place them on a tray and press a light pattern on top with a fork.",
+   "Bake at 160°C (320°F) for 15 to 18 minutes; they must stay pale.",
+   "Leave them to cool completely on the tray: they are very fragile while warm."
+  ]
+ },
+ {
+  "id": "tcharek_msakar",
+  "name": {
+   "en": "Tcharek Msakar",
+   "fr": "Tcharek msakar (cornes de gazelle au sucre)",
+   "ar": "تشاراك مسكر"
+  },
+  "cuisine": "algerian",
+  "category": "pastry",
+  "flavors": [
+   "nutty",
+   "floral",
+   "spice"
+  ],
+  "time_minutes": 120,
+  "difficulty": "hard",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 400
+   },
+   {
+    "id": "smen",
+    "qty": 125
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 100
+   },
+   {
+    "id": "almond_flour",
+    "qty": 300
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "cinnamon",
+    "qty": 2
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 300
+   }
+  ],
+  "steps": [
+   "Rub the smen into the flour and salt, then bind with orange blossom water into a smooth dough and rest it for 20 minutes.",
+   "Mix the almond flour, sugar, cinnamon, egg and a little orange blossom water into a firm filling and shape small sausages.",
+   "Roll out the dough thinly, wrap each sausage in a strip of dough and curve it into a crescent.",
+   "Bake at 170°C (340°F) for 15 to 20 minutes, without letting them brown.",
+   "While still warm, dip them in orange blossom water and roll them generously in powdered sugar."
+  ]
+ },
+ {
+  "id": "baklawa",
+  "name": {
+   "en": "Algerian Baklawa",
+   "fr": "Baklawa algérienne",
+   "ar": "البقلاوة"
+  },
+  "cuisine": "algerian",
+  "category": "pastry",
+  "flavors": [
+   "nutty",
+   "floral",
+   "spice"
+  ],
+  "time_minutes": 240,
+  "difficulty": "hard",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 500
+   },
+   {
+    "id": "smen",
+    "qty": 100
+   },
+   {
+    "id": "butter",
+    "qty": 250
+   },
+   {
+    "id": "almonds",
+    "qty": 500
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "cinnamon",
+    "qty": 3
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 100
+   },
+   {
+    "id": "honey",
+    "qty": 500
+   },
+   {
+    "id": "water",
+    "qty": 100
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   }
+  ],
+  "steps": [
+   "Make a smooth dough with the flour, salt, smen and water, then rest it for 1 hour and divide it into 16 balls.",
+   "Grind the almonds coarsely with the sugar and cinnamon, and moisten with orange blossom water.",
+   "Roll each ball paper-thin; layer 8 sheets in a buttered tin, brushing each with melted butter.",
+   "Spread the almond filling, cover with the remaining 8 buttered sheets, cut into diamonds and decorate with almonds.",
+   "Pour the rest of the melted butter over, bake at 170°C (340°F) for about 1 hour, then pour warm honey over the hot baklawa."
+  ]
+ },
+ {
+  "id": "mbesses",
+  "name": {
+   "en": "Mbesses",
+   "fr": "Mbesses",
+   "ar": "المبسس"
+  },
+  "cuisine": "algerian",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 500
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 150
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "baking_powder",
+    "qty": 10
+   },
+   {
+    "id": "milk",
+    "qty": 200
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Rub the oil into the semolina until every grain is coated.",
+   "Add the sugar, vanilla sugar and baking powder.",
+   "Whisk the eggs with the milk and stir them into the semolina to get a thick, pourable batter.",
+   "Pour into an oiled tin and bake at 180°C (350°F) for 30 to 35 minutes, until golden.",
+   "Cut into squares; serve as is or brushed with a light syrup or honey."
+  ]
+ },
+ {
+  "id": "harcha",
+  "name": {
+   "en": "Harcha",
+   "fr": "Harcha",
+   "ar": "الحرشة"
+  },
+  "cuisine": "algerian",
+  "category": "bread",
+  "flavors": [],
+  "time_minutes": 40,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "semolina",
+    "qty": 400
+   },
+   {
+    "id": "butter",
+    "qty": 100
+   },
+   {
+    "id": "milk",
+    "qty": 200
+   },
+   {
+    "id": "sugar",
+    "qty": 30
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   },
+   {
+    "id": "salt",
+    "qty": 3
+   },
+   {
+    "id": "honey",
+    "qty": 100,
+    "optional": true
+   }
+  ],
+  "steps": [
+   "Rub the melted butter into the semolina with the sugar, salt and baking powder.",
+   "Add the milk little by little until you get a soft dough that doesn't stick; rest it for 10 minutes.",
+   "Shape small patties about 1 cm thick and coat them in a little dry semolina.",
+   "Cook on a hot dry pan over medium-low heat for 4 to 5 minutes per side, until golden.",
+   "Serve warm, split and drizzled with honey or butter."
+  ]
+ },
+ {
+  "id": "sables_confiture",
+  "name": {
+   "en": "Jam Sandwich Cookies",
+   "fr": "Sablés à la confiture",
+   "ar": "صابلي بالمربى"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 75,
+  "difficulty": "medium",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 375
+   },
+   {
+    "id": "butter",
+    "qty": 250
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 120
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   },
+   {
+    "id": "cornstarch",
+    "qty": 30
+   },
+   {
+    "id": "apricot_jam",
+    "qty": 200
+   }
+  ],
+  "steps": [
+   "Cream the butter with the powdered sugar and vanilla sugar, then add the egg.",
+   "Add the flour and cornstarch and mix just until a smooth dough forms; chill for 30 minutes.",
+   "Roll out to 4 mm, cut rounds and cut a small window in half of them.",
+   "Bake at 170°C (340°F) for 10 to 12 minutes, until barely golden, and let them cool.",
+   "Dust the tops with powdered sugar, spread jam on the bases and sandwich them together."
+  ]
+ },
+ {
+  "id": "mkhabez",
+  "name": {
+   "en": "Mkhabez",
+   "fr": "Mkhabez",
+   "ar": "المخبز"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "nutty",
+   "citrus",
+   "floral"
+  ],
+  "time_minutes": 90,
+  "difficulty": "medium",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "almond_flour",
+    "qty": 500
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 450
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   },
+   {
+    "id": "orange_blossom_water",
+    "qty": 20
+   }
+  ],
+  "steps": [
+   "Mix the almond flour, 250 g powdered sugar, vanilla sugar and lemon zest.",
+   "Add the eggs and knead into a smooth paste; roll it out 2 cm thick and cut into squares.",
+   "Bake at 160°C (320°F) for 12 to 15 minutes; they must stay pale. Let them cool.",
+   "Make a glaze with the remaining powdered sugar, lemon juice and orange blossom water.",
+   "Dip the tops in the glaze, let it set, and decorate with small sugar flowers if you like."
+  ]
+ },
+ {
+  "id": "qrichlat",
+  "name": {
+   "en": "Qrichlat",
+   "fr": "Qrichlat (croquants à l'anis)",
+   "ar": "القريشلات"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "spice",
+   "nutty"
+  ],
+  "time_minutes": 80,
+  "difficulty": "easy",
+  "servings": 40,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 500
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 120
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "baking_powder",
+    "qty": 10
+   },
+   {
+    "id": "anise_seeds",
+    "qty": 10
+   },
+   {
+    "id": "sesame_seeds",
+    "qty": 50
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Whisk the eggs, sugar, vanilla sugar and oil together.",
+   "Add the anise and sesame seeds, then the flour and baking powder, to make a soft dough.",
+   "Shape long logs, brush with beaten egg and bake at 180°C (350°F) for 25 minutes.",
+   "Slice the warm logs into 1 cm pieces.",
+   "Bake the slices again for 10 to 15 minutes, turning once, until dry and golden."
+  ]
+ },
+ {
+  "id": "halwat_tabaa",
+  "name": {
+   "en": "Halwat Tabaa",
+   "fr": "Halwat tabaa",
+   "ar": "حلوة الطابع"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 40,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 500
+   },
+   {
+    "id": "butter",
+    "qty": 250
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   },
+   {
+    "id": "baking_powder",
+    "qty": 4
+   }
+  ],
+  "steps": [
+   "Cream the softened butter with the sugar and vanilla sugar.",
+   "Beat in the eggs, then add the flour and baking powder and knead briefly into a smooth dough.",
+   "Roll out to 5 mm and cut with decorative cutters (tabaa).",
+   "Brush with egg yolk and bake at 180°C (350°F) for 12 to 15 minutes, until golden.",
+   "Cool on a rack and store in an airtight tin."
+  ]
+ },
+ {
+  "id": "halwat_kaoukaou",
+  "name": {
+   "en": "Peanut Shortbread",
+   "fr": "Halwat el kaoukaou (sablés cacahuètes)",
+   "ar": "حلوة الكاوكاو"
+  },
+  "cuisine": "algerian",
+  "category": "cookie",
+  "flavors": [
+   "nutty",
+   "vanilla"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "peanuts",
+    "qty": 200
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 300
+   },
+   {
+    "id": "butter",
+    "qty": 150
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 120
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Roast the peanuts, rub off the skins and grind them finely.",
+   "Cream the butter with the powdered sugar and vanilla sugar, then add the egg.",
+   "Mix in the ground peanuts and the flour to make a soft dough.",
+   "Shape small balls or cut shapes and place them on a lined tray.",
+   "Bake at 170°C (340°F) for 15 minutes and dust with powdered sugar once cool."
+  ]
+ },
+ {
+  "id": "crepes",
+  "name": {
+   "en": "French Crêpes",
+   "fr": "Crêpes",
+   "ar": "الكريب"
+  },
+  "cuisine": "french",
+  "category": "dessert",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 40,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "milk",
+    "qty": 500
+   },
+   {
+    "id": "butter",
+    "qty": 30
+   },
+   {
+    "id": "sugar",
+    "qty": 25
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Whisk the flour, sugar, vanilla sugar and salt, then whisk in the eggs.",
+   "Pour in the milk gradually, whisking to avoid lumps, then add the melted butter.",
+   "Rest the batter for 30 minutes.",
+   "Cook thin crêpes in a hot, lightly buttered pan, about 1 minute per side.",
+   "Serve with sugar, jam, honey or chocolate spread."
+  ]
+ },
+ {
+  "id": "fudgy_brownies",
+  "name": {
+   "en": "Fudgy Brownies",
+   "fr": "Brownies fondants",
+   "ar": "براونيز"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "chocolate"
+  ],
+  "time_minutes": 45,
+  "difficulty": "easy",
+  "servings": 16,
+  "ingredients": [
+   {
+    "id": "dark_chocolate",
+    "qty": 200
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 90
+   },
+   {
+    "id": "cocoa_powder",
+    "qty": 20
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 175°C (350°F) and line a 20 cm square tin.",
+   "Melt the chocolate and butter together, then whisk in the sugar.",
+   "Whisk in the eggs one at a time until glossy.",
+   "Fold in the flour, cocoa and salt.",
+   "Bake for 22 to 25 minutes: the center should still be slightly gooey. Cool before cutting."
+  ]
+ },
+ {
+  "id": "chocolate_chip_cookies",
+  "name": {
+   "en": "Chocolate Chip Cookies",
+   "fr": "Cookies aux pépites de chocolat",
+   "ar": "كوكيز برقائق الشوكولاتة"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "chocolate",
+   "vanilla"
+  ],
+  "time_minutes": 30,
+  "difficulty": "easy",
+  "servings": 20,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 280
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 1
+   },
+   {
+    "id": "dark_chocolate",
+    "qty": 200
+   },
+   {
+    "id": "baking_soda",
+    "qty": 5
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   }
+  ],
+  "steps": [
+   "Cream the softened butter with the brown sugar, then beat in the egg and vanilla.",
+   "Mix in the flour, baking soda and salt.",
+   "Fold in the chopped chocolate.",
+   "Scoop balls onto a lined tray, leaving space between them.",
+   "Bake at 180°C (350°F) for 10 to 12 minutes; they firm up as they cool."
+  ]
+ },
+ {
+  "id": "banana_bread",
+  "name": {
+   "en": "Banana Bread",
+   "fr": "Banana bread",
+   "ar": "خبز الموز"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "spice"
+  ],
+  "time_minutes": 75,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "banana",
+    "qty": 3
+   },
+   {
+    "id": "butter",
+    "qty": 115
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "baking_soda",
+    "qty": 5
+   },
+   {
+    "id": "cinnamon",
+    "qty": 2
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 175°C (350°F) and grease a loaf tin.",
+   "Mash the bananas, then mix in the melted butter, sugar and eggs.",
+   "Fold in the flour, baking soda, cinnamon and salt.",
+   "Pour into the tin and bake for 55 to 60 minutes, until a skewer comes out clean.",
+   "Cool for 10 minutes in the tin, then on a rack."
+  ]
+ },
+ {
+  "id": "vegan_banana_bread",
+  "name": {
+   "en": "Vegan Banana Bread",
+   "fr": "Banana bread vegan",
+   "ar": "خبز الموز النباتي"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "spice"
+  ],
+  "time_minutes": 75,
+  "difficulty": "easy",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 250
+   },
+   {
+    "id": "banana",
+    "qty": 3
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 80
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 100
+   },
+   {
+    "id": "plant_milk",
+    "qty": 60
+   },
+   {
+    "id": "baking_soda",
+    "qty": 5
+   },
+   {
+    "id": "cinnamon",
+    "qty": 2
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 175°C (350°F) and oil a loaf tin.",
+   "Mash the bananas with the oil, brown sugar and plant milk.",
+   "Fold in the flour, baking soda, cinnamon and salt.",
+   "Bake for 55 to 60 minutes, until a skewer comes out clean.",
+   "Cool completely before slicing; the riper the bananas, the sweeter the loaf."
+  ]
+ },
+ {
+  "id": "gateau_au_yaourt",
+  "name": {
+   "en": "French Yogurt Cake",
+   "fr": "Gâteau au yaourt",
+   "ar": "كيك الياغورت"
+  },
+  "cuisine": "french",
+  "category": "cake",
+  "flavors": [
+   "citrus"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 8,
+  "ingredients": [
+   {
+    "id": "yogurt",
+    "qty": 125
+   },
+   {
+    "id": "sugar",
+    "qty": 250
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 270
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 100
+   },
+   {
+    "id": "baking_powder",
+    "qty": 11
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 180°C (350°F) and grease a round tin.",
+   "Whisk the yogurt with the sugar, then the eggs one by one.",
+   "Add the lemon zest, flour and baking powder, then the oil.",
+   "Pour into the tin and bake for 35 minutes, until golden and springy.",
+   "Classic tip: use the empty yogurt pot to measure the other ingredients."
+  ]
+ },
+ {
+  "id": "french_apple_cake",
+  "name": {
+   "en": "French Apple Cake",
+   "fr": "Gâteau aux pommes",
+   "ar": "كيك التفاح"
+  },
+  "cuisine": "french",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 70,
+  "difficulty": "easy",
+  "servings": 8,
+  "ingredients": [
+   {
+    "id": "apple",
+    "qty": 4
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 125
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "butter",
+    "qty": 100
+   },
+   {
+    "id": "milk",
+    "qty": 80
+   },
+   {
+    "id": "baking_powder",
+    "qty": 8
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 180°C (350°F) and butter a 22 cm tin.",
+   "Whisk the eggs with the sugar and vanilla sugar, then add the melted butter and milk.",
+   "Stir in the flour and baking powder.",
+   "Fold in the peeled, thinly sliced apples; the batter should just coat them.",
+   "Bake for 45 to 50 minutes, until golden and set."
+  ]
+ },
+ {
+  "id": "basque_cheesecake",
+  "name": {
+   "en": "Basque Burnt Cheesecake",
+   "fr": "Cheesecake basque",
+   "ar": "تشيز كيك الباسك"
+  },
+  "cuisine": "international",
+  "category": "dessert",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 90,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "cream_cheese",
+    "qty": 900
+   },
+   {
+    "id": "sugar",
+    "qty": 250
+   },
+   {
+    "id": "eggs",
+    "qty": 5
+   },
+   {
+    "id": "heavy_cream",
+    "qty": 400
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 25
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 220°C (430°F) and line a 22 cm tin with crumpled baking paper.",
+   "Beat the cream cheese with the sugar until smooth, then add the eggs one at a time.",
+   "Stir in the cream, then sift in the flour and salt.",
+   "Bake for 50 to 60 minutes: the top should be very dark and the center still wobbly.",
+   "Cool completely, then chill for at least 4 hours before slicing."
+  ]
+ },
+ {
+  "id": "rochers_coco",
+  "name": {
+   "en": "Coconut Macaroons",
+   "fr": "Rochers à la noix de coco",
+   "ar": "روشي جوز الهند"
+  },
+  "cuisine": "french",
+  "category": "cookie",
+  "flavors": [
+   "coconut",
+   "vanilla"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 20,
+  "ingredients": [
+   {
+    "id": "desiccated_coconut",
+    "qty": 200
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 3
+   },
+   {
+    "id": "vanilla_sugar",
+    "qty": 8
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 180°C (350°F) and line a tray.",
+   "Whisk the eggs with the sugar and vanilla sugar until frothy.",
+   "Stir in the coconut and let it soak for 10 minutes.",
+   "Shape small pyramids with your fingers.",
+   "Bake for 12 to 15 minutes, until the tips are golden."
+  ]
+ },
+ {
+  "id": "vegan_chocolate_cake",
+  "name": {
+   "en": "Vegan Chocolate Cake",
+   "fr": "Gâteau au chocolat vegan",
+   "ar": "كيك الشوكولاتة النباتي"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "chocolate",
+   "vanilla"
+  ],
+  "time_minutes": 50,
+  "difficulty": "easy",
+  "servings": 8,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 190
+   },
+   {
+    "id": "cocoa_powder",
+    "qty": 40
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "baking_soda",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 2
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 80
+   },
+   {
+    "id": "vinegar",
+    "qty": 15
+   },
+   {
+    "id": "water",
+    "qty": 240
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 5
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 180°C (350°F) and oil a 20 cm tin.",
+   "Whisk the flour, cocoa, sugar, baking soda and salt.",
+   "Add the water, oil, vinegar and vanilla and whisk until smooth.",
+   "Pour into the tin straight away and bake for 30 to 35 minutes.",
+   "Cool completely; the vinegar and baking soda replace the eggs as the raising agent."
+  ]
+ },
+ {
+  "id": "oatmeal_raisin_cookies",
+  "name": {
+   "en": "Oatmeal Raisin Cookies",
+   "fr": "Cookies avoine et raisins secs",
+   "ar": "كوكيز الشوفان والزبيب"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "spice"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 30,
+  "ingredients": [
+   {
+    "id": "oats",
+    "qty": 240
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 190
+   },
+   {
+    "id": "butter",
+    "qty": 225
+   },
+   {
+    "id": "brown_sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 2
+   },
+   {
+    "id": "raisins",
+    "qty": 150
+   },
+   {
+    "id": "cinnamon",
+    "qty": 3
+   },
+   {
+    "id": "baking_soda",
+    "qty": 5
+   }
+  ],
+  "steps": [
+   "Cream the butter with the brown sugar, then beat in the eggs.",
+   "Mix in the flour, baking soda and cinnamon.",
+   "Stir in the oats and raisins.",
+   "Drop spoonfuls onto lined trays.",
+   "Bake at 180°C (350°F) for 10 to 12 minutes, until the edges are golden."
+  ]
+ },
+ {
+  "id": "gluten_free_almond_cake",
+  "name": {
+   "en": "Gluten-Free Almond Cake",
+   "fr": "Gâteau aux amandes sans gluten",
+   "ar": "كيك اللوز بدون غلوتين"
+  },
+  "cuisine": "mediterranean",
+  "category": "cake",
+  "flavors": [
+   "nutty",
+   "citrus"
+  ],
+  "time_minutes": 55,
+  "difficulty": "easy",
+  "servings": 8,
+  "ingredients": [
+   {
+    "id": "almond_flour",
+    "qty": 250
+   },
+   {
+    "id": "sugar",
+    "qty": 200
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 20
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 180°C (350°F) and line a 22 cm tin.",
+   "Whisk the eggs and sugar until pale and thick.",
+   "Fold in the almond flour and lemon zest.",
+   "Bake for 35 to 40 minutes, until golden and set.",
+   "Cool, then dust with powdered sugar."
+  ]
+ },
+ {
+  "id": "flourless_chocolate_cake",
+  "name": {
+   "en": "Flourless Chocolate Cake",
+   "fr": "Fondant au chocolat sans farine",
+   "ar": "كيك الشوكولاتة بدون دقيق"
+  },
+  "cuisine": "french",
+  "category": "cake",
+  "flavors": [
+   "chocolate"
+  ],
+  "time_minutes": 60,
+  "difficulty": "medium",
+  "servings": 10,
+  "ingredients": [
+   {
+    "id": "dark_chocolate",
+    "qty": 250
+   },
+   {
+    "id": "butter",
+    "qty": 150
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "eggs",
+    "qty": 5
+   },
+   {
+    "id": "cocoa_powder",
+    "qty": 15
+   }
+  ],
+  "steps": [
+   "Preheat the oven to 170°C (340°F) and line a 22 cm tin.",
+   "Melt the chocolate with the butter.",
+   "Whisk the eggs with the sugar until doubled in volume.",
+   "Fold the chocolate into the eggs, then the cocoa.",
+   "Bake for 30 to 35 minutes; it sets further as it cools."
+  ]
+ },
+ {
+  "id": "almond_financiers",
+  "name": {
+   "en": "Almond Financiers",
+   "fr": "Financiers aux amandes",
+   "ar": "فينانسييه باللوز"
+  },
+  "cuisine": "french",
+  "category": "cake",
+  "flavors": [
+   "nutty"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 16,
+  "ingredients": [
+   {
+    "id": "almond_flour",
+    "qty": 100
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 150
+   },
+   {
+    "id": "all_purpose_flour",
+    "qty": 50
+   },
+   {
+    "id": "eggs",
+    "qty": 4
+   },
+   {
+    "id": "butter",
+    "qty": 125
+   }
+  ],
+  "steps": [
+   "Cook the butter until it smells nutty and turns light brown, then let it cool.",
+   "Mix the almond flour, powdered sugar and flour.",
+   "Stir in the egg whites (keep the yolks for another recipe), then the brown butter.",
+   "Fill buttered financier moulds three-quarters full.",
+   "Bake at 200°C (390°F) for 12 to 15 minutes, until golden at the edges."
+  ]
+ },
+ {
+  "id": "sesame_honey_bars",
+  "name": {
+   "en": "Sesame Honey Bars",
+   "fr": "Barres sésame-miel",
+   "ar": "قطع السمسم بالعسل"
+  },
+  "cuisine": "mediterranean",
+  "category": "no_bake",
+  "flavors": [
+   "nutty",
+   "citrus"
+  ],
+  "time_minutes": 30,
+  "difficulty": "easy",
+  "servings": 16,
+  "ingredients": [
+   {
+    "id": "sesame_seeds",
+    "qty": 300
+   },
+   {
+    "id": "honey",
+    "qty": 200
+   },
+   {
+    "id": "sugar",
+    "qty": 50
+   },
+   {
+    "id": "lemon",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Toast the sesame seeds in a dry pan until golden.",
+   "Heat the honey, sugar and a squeeze of lemon until it reaches a light caramel.",
+   "Stir in the sesame seeds off the heat.",
+   "Spread quickly between two sheets of oiled baking paper, 1 cm thick.",
+   "Cut into bars while still warm and let them harden."
+  ]
+ },
+ {
+  "id": "date_energy_balls",
+  "name": {
+   "en": "Date Energy Balls",
+   "fr": "Boules énergétiques aux dattes",
+   "ar": "كرات التمر"
+  },
+  "cuisine": "algerian",
+  "category": "no_bake",
+  "flavors": [
+   "chocolate",
+   "nutty",
+   "coconut"
+  ],
+  "time_minutes": 15,
+  "difficulty": "easy",
+  "servings": 20,
+  "ingredients": [
+   {
+    "id": "dates",
+    "qty": 300
+   },
+   {
+    "id": "almonds",
+    "qty": 150
+   },
+   {
+    "id": "desiccated_coconut",
+    "qty": 50
+   },
+   {
+    "id": "cocoa_powder",
+    "qty": 20
+   }
+  ],
+  "steps": [
+   "Pit the dates and soak them in warm water for 5 minutes if they are dry.",
+   "Blend the almonds into coarse crumbs.",
+   "Add the dates and cocoa and blend into a sticky paste.",
+   "Roll into small balls and coat them in coconut.",
+   "Chill for 30 minutes; they keep a week in the fridge."
+  ]
+ },
+ {
+  "id": "rice_flour_shortbread",
+  "name": {
+   "en": "Rice Flour Shortbread",
+   "fr": "Sablés à la farine de riz",
+   "ar": "صابلي بدقيق الأرز"
+  },
+  "cuisine": "international",
+  "category": "cookie",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 40,
+  "difficulty": "easy",
+  "servings": 20,
+  "ingredients": [
+   {
+    "id": "rice_flour",
+    "qty": 200
+   },
+   {
+    "id": "cornstarch",
+    "qty": 50
+   },
+   {
+    "id": "butter",
+    "qty": 170
+   },
+   {
+    "id": "powdered_sugar",
+    "qty": 60
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 5
+   },
+   {
+    "id": "salt",
+    "qty": 1
+   }
+  ],
+  "steps": [
+   "Cream the butter with the powdered sugar and vanilla.",
+   "Mix in the rice flour, cornstarch and salt until a soft dough forms.",
+   "Roll into a log, chill for 30 minutes and slice into rounds.",
+   "Bake at 160°C (320°F) for 15 to 18 minutes, keeping them pale.",
+   "Cool on the tray; they crisp up as they cool."
+  ]
+ },
+ {
+  "id": "vegan_vanilla_cupcakes",
+  "name": {
+   "en": "Vegan Vanilla Cupcakes",
+   "fr": "Cupcakes vanille vegan",
+   "ar": "كب كيك الفانيليا النباتي"
+  },
+  "cuisine": "international",
+  "category": "cake",
+  "flavors": [
+   "vanilla"
+  ],
+  "time_minutes": 35,
+  "difficulty": "easy",
+  "servings": 12,
+  "ingredients": [
+   {
+    "id": "all_purpose_flour",
+    "qty": 190
+   },
+   {
+    "id": "sugar",
+    "qty": 150
+   },
+   {
+    "id": "plant_milk",
+    "qty": 240
+   },
+   {
+    "id": "vinegar",
+    "qty": 5
+   },
+   {
+    "id": "vegetable_oil",
+    "qty": 80
+   },
+   {
+    "id": "vanilla_extract",
+    "qty": 10
+   },
+   {
+    "id": "baking_powder",
+    "qty": 6
+   },
+   {
+    "id": "baking_soda",
+    "qty": 2
+   }
+  ],
+  "steps": [
+   "Stir the vinegar into the plant milk and let it curdle for 5 minutes.",
+   "Whisk in the oil, sugar and vanilla.",
+   "Add the flour, baking powder and baking soda and whisk until just smooth.",
+   "Fill lined cups two-thirds full.",
+   "Bake at 175°C (350°F) for 18 to 20 minutes."
+  ]
+ }
+]

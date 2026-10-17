@@ -1,0 +1,20 @@
+[project]
+name = "pantry-chef"
+version = "2.0.0"
+description = "Hybrid baking expert system: LLM for language, rules for decisions"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 200
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning", "ignore:Using `httpx` with `starlette.testclient`"]
+
+[tool.ruff.lint.per-file-ignores]
+"app/llm/parser.py" = ["E501"]  # prompt text

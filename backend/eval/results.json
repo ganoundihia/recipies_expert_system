@@ -1,0 +1,1370 @@
+{
+ "generated_at": "2026-10-17T08:59:40.282376+00:00",
+ "cases": 40,
+ "models": {
+  "llm_only": "openai/gpt-oss-120b",
+  "parse": "openai/gpt-oss-20b",
+  "narrate": "openai/gpt-oss-120b",
+  "guard": "meta-llama/llama-prompt-guard-2-86m"
+ },
+ "system_labels": {
+  "llm_only": "LLM only",
+  "rules_only": "Rules only",
+  "hybrid": "Hybrid (Pantry Chef)"
+ },
+ "systems": {
+  "llm_only": {
+   "constraint_violation_rate": 0.2,
+   "hallucinated_recipe_rate": 0.025,
+   "shopping_list_accuracy": 0.325,
+   "craving_match_rate": 0.8571,
+   "pantry_f1": null,
+   "constraint_recall": null,
+   "ungrounded_text_caught_rate": null,
+   "error_rate": 0.0,
+   "latency_p50_ms": 8175,
+   "latency_p95_ms": 21050
+  },
+  "rules_only": {
+   "constraint_violation_rate": 0.0,
+   "hallucinated_recipe_rate": 0.0,
+   "shopping_list_accuracy": 0.75,
+   "craving_match_rate": 0.6857,
+   "pantry_f1": 0.9539,
+   "constraint_recall": 0.9688,
+   "ungrounded_text_caught_rate": null,
+   "error_rate": 0.0,
+   "latency_p50_ms": 23,
+   "latency_p95_ms": 82
+  },
+  "hybrid": {
+   "constraint_violation_rate": 0.0,
+   "hallucinated_recipe_rate": 0.0,
+   "shopping_list_accuracy": 0.925,
+   "craving_match_rate": 0.6,
+   "pantry_f1": 0.9712,
+   "constraint_recall": 1.0,
+   "ungrounded_text_caught_rate": 0.025,
+   "error_rate": 0.0,
+   "latency_p50_ms": 233225,
+   "latency_p95_ms": 467999
+  }
+ },
+ "metrics": {
+  "constraint_violation_rate": {
+   "label": "Diet / allergy violations",
+   "description": "Top pick uses an ingredient the user's diet or allergy forbids.",
+   "better": "lower",
+   "format": "percent"
+  },
+  "hallucinated_recipe_rate": {
+   "label": "Invented recipes",
+   "description": "Top pick is not a recipe from the catalog.",
+   "better": "lower",
+   "format": "percent"
+  },
+  "shopping_list_accuracy": {
+   "label": "Honest shopping list",
+   "description": "Declared missing ingredients exactly match what the user really lacks.",
+   "better": "higher",
+   "format": "percent"
+  },
+  "craving_match_rate": {
+   "label": "Craving satisfied",
+   "description": "When a flavor was asked for, the top pick has it.",
+   "better": "higher",
+   "format": "percent"
+  },
+  "pantry_f1": {
+   "label": "Pantry extraction F1",
+   "description": "Ingredients understood from the text vs. the true pantry.",
+   "better": "higher",
+   "format": "number"
+  },
+  "constraint_recall": {
+   "label": "Constraint recall",
+   "description": "Share of stated diets/allergies the parser captured.",
+   "better": "higher",
+   "format": "percent"
+  },
+  "ungrounded_text_caught_rate": {
+   "label": "Ungrounded LLM text caught",
+   "description": "Generated answers rejected by the verifier and replaced by a safe template.",
+   "better": "lower",
+   "format": "percent"
+  },
+  "error_rate": {
+   "label": "Errors",
+   "description": "Requests that failed (API error, invalid output).",
+   "better": "lower",
+   "format": "percent"
+  },
+  "latency_p50_ms": {
+   "label": "Latency p50",
+   "description": "Median end-to-end time per request.",
+   "better": "lower",
+   "format": "ms"
+  },
+  "latency_p95_ms": {
+   "label": "Latency p95",
+   "description": "95th percentile end-to-end time.",
+   "better": "lower",
+   "format": "ms"
+  }
+ },
+ "notes": [
+  "Cases are synthetic requests with known ground truth, rendered in English, French and Arabic (seeded, reproducible).",
+  "LLM only receives the full catalog with ingredient lists and must respect diets itself; its declared substitutions are honored when judging.",
+  "Rules only uses the deterministic keyword parser; hybrid uses the LLM for parsing and narration, the expert system for every decision.",
+  "Shopping-list accuracy compares declared missing items with what the user truly lacks, so parsing mistakes are penalized.",
+  "Latencies were measured on Groq's free tier and include rate-limit waits; the expert system itself answers in milliseconds."
+ ],
+ "cases_detail": {
+  "llm_only": [
+   {
+    "recipe": "semolina_lemon_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 867.3723000101745
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 787.9706001840532
+   },
+   {
+    "recipe": "gluten_free_almond_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 1084.9465001374483
+   },
+   {
+    "recipe": "ghribia",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": false,
+    "latency_ms": 1485.1473001763225
+   },
+   {
+    "recipe": "semolina_lemon_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 746.6561002656817
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 768.9434997737408
+   },
+   {
+    "recipe": "rice_flour_shortbread",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": null,
+    "latency_ms": 6319.2373001948
+   },
+   {
+    "recipe": "vegan_vanilla_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 21068.576800171286
+   },
+   {
+    "recipe": "vegan_chocolate_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 9380.000799894333
+   },
+   {
+    "recipe": "vegan_vanilla_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": false,
+    "latency_ms": 9525.245900265872
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 12538.024799898267
+   },
+   {
+    "recipe": "vegan_chocolate_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": null,
+    "latency_ms": 6207.416700199246
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 10120.95159990713
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": null,
+    "latency_ms": 3753.432299941778
+   },
+   {
+    "recipe": "vanilla_oil_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 11316.608800087124
+   },
+   {
+    "recipe": "almond_financiers",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 19901.776500046253
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 7666.817700024694
+   },
+   {
+    "recipe": "gluten_free_almond_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 20704.54329997301
+   },
+   {
+    "recipe": "citrus_shortbread_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 6239.422000013292
+   },
+   {
+    "recipe": "makrout",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 11634.70680033788
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": null,
+    "latency_ms": 5846.470699645579
+   },
+   {
+    "recipe": "makrout",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 8357.639299705625
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": false,
+    "latency_ms": 9250.17930008471
+   },
+   {
+    "recipe": "semolina_lemon_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 9459.833700209856
+   },
+   {
+    "recipe": "vegan_vanilla_cupcakes",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 7151.426800061017
+   },
+   {
+    "recipe": "lemon_drizzle_muffins",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 7787.208000198007
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 7065.319899935275
+   },
+   {
+    "recipe": "date_energy_balls",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 8642.788699828088
+   },
+   {
+    "recipe": "semolina_coffee_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 10180.209700018167
+   },
+   {
+    "recipe": "none",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": true,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": false,
+    "latency_ms": 8280.055900104344
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 9131.368699949235
+   },
+   {
+    "recipe": "almond_financiers",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 6880.977800115943
+   },
+   {
+    "recipe": "coffee_layer_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": true,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 8216.727799735963
+   },
+   {
+    "recipe": "flourless_chocolate_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 16490.322400350124
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 13745.531900320202
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 857.3235003277659
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 28714.52370006591
+   },
+   {
+    "recipe": "fudgy_brownies",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 3166.5941001847386
+   },
+   {
+    "recipe": "coffee_crumb_cake",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 8133.7188999168575
+   },
+   {
+    "recipe": "makrout",
+    "pantry_f1": null,
+    "constraint_recall": null,
+    "hallucinated": false,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 4324.373499955982
+   }
+  ],
+  "rules_only": [
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 82.3106998577714
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 0.9600000000000001,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 22.334900218993425
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 0.923076923076923,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 41.77139978855848
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.9411764705882353,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 101.0652999393642
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.888888888888889,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 18.88660015538335
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 37.352200131863356
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 34.48929963633418
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 0.8750000000000001,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 26.696600019931793
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 23.007999639958143
+   },
+   {
+    "recipe": "citrus_olive_oil_cake",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 34.210999961942434
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 19.476099871098995
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 48.11110021546483
+   },
+   {
+    "recipe": "vanilla_milk_bread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 18.338900059461594
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 40.69879977032542
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 16.85790019109845
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 0.9523809523809523,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 16.74260012805462
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 22.020000033080578
+   },
+   {
+    "recipe": "gluten_free_almond_cake",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 21.789100021123886
+   },
+   {
+    "recipe": "citrus_shortbread_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.9411764705882353,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 73.60620005056262
+   },
+   {
+    "recipe": "mkhabez",
+    "hallucinated": false,
+    "pantry_f1": 0.9090909090909091,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 20.63259994611144
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 0.8888888888888888,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "latency_ms": 24.089499842375517
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 25.048499926924706
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 41.219799779355526
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.9090909090909091,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 53.98740014061332
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 22.844200022518635
+   },
+   {
+    "recipe": "mchewek",
+    "hallucinated": false,
+    "pantry_f1": 0.9473684210526316,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 19.08650016412139
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 0.875,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 23.34569999948144
+   },
+   {
+    "recipe": "mkhabez",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 26.27119980752468
+   },
+   {
+    "recipe": "harcha",
+    "hallucinated": false,
+    "pantry_f1": 0.923076923076923,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 15.474900137633085
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 32.77920000255108
+   },
+   {
+    "recipe": "flourless_chocolate_cake",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 35.89359996840358
+   },
+   {
+    "recipe": "almond_financiers",
+    "hallucinated": false,
+    "pantry_f1": 0.8333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 17.93510001152754
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 0.8750000000000001,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 27.520400006324053
+   },
+   {
+    "recipe": "flourless_chocolate_cake",
+    "hallucinated": false,
+    "pantry_f1": 0.9473684210526316,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 19.935099873691797
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "latency_ms": 33.27619982883334
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 19.822099711745977
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 0.9090909090909091,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 19.17179999873042
+   },
+   {
+    "recipe": "harcha",
+    "hallucinated": false,
+    "pantry_f1": 0.9473684210526316,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "latency_ms": 17.466199584305286
+   },
+   {
+    "recipe": "coffee_layer_cake",
+    "hallucinated": false,
+    "pantry_f1": 0.9090909090909091,
+    "constraint_recall": 0.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 19.066600129008293
+   },
+   {
+    "recipe": "kalb_el_louz",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "latency_ms": 19.670499954372644
+   }
+  ],
+  "hybrid": [
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 235960.23799991235
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 0.9565217391304348,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 347072.2816004418
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 321384.47740022093
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 230488.79979969934
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 258349.26440007985
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "narration_rejected": false,
+    "latency_ms": 216906.12039994448
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "narration_rejected": false,
+    "latency_ms": 293906.5348999575
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 439021.25220000744
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": true,
+    "latency_ms": 157402.77689974755
+   },
+   {
+    "recipe": "citrus_shortbread_cookies",
+    "hallucinated": false,
+    "pantry_f1": 0.8333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 318123.16840002313
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 250297.98140004277
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "narration_rejected": false,
+    "latency_ms": 468820.6613003276
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 0.8333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 245052.3474002257
+   },
+   {
+    "recipe": "chocolate_chip_cookies",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "narration_rejected": false,
+    "latency_ms": 249756.2370998785
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 354609.778100159
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 209465.34170024097
+   },
+   {
+    "recipe": "coffee_shortbread",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 282122.72390024737
+   },
+   {
+    "recipe": "gluten_free_almond_cake",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 186963.24589988217
+   },
+   {
+    "recipe": "citrus_madeleines",
+    "hallucinated": false,
+    "pantry_f1": 0.8571428571428571,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 452390.02789976075
+   },
+   {
+    "recipe": "rochers_coco",
+    "hallucinated": false,
+    "pantry_f1": 0.9090909090909091,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 62570.72760025039
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 0.9411764705882353,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": null,
+    "narration_rejected": false,
+    "latency_ms": 62659.79460021481
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 296791.4499999024
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 371544.0396000631
+   },
+   {
+    "recipe": "lemon_butter_cookies",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 261915.69900000468
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 247205.3975998424
+   },
+   {
+    "recipe": "mchewek",
+    "hallucinated": false,
+    "pantry_f1": 0.9473684210526316,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 385765.0382001884
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 24034091.11889964
+   },
+   {
+    "recipe": "mkhabez",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 6006.0736001469195
+   },
+   {
+    "recipe": "harcha",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 3077.7154001407325
+   },
+   {
+    "recipe": "sesame_honey_bars",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 1950.530800037086
+   },
+   {
+    "recipe": "flourless_chocolate_cake",
+    "hallucinated": false,
+    "pantry_f1": 0.8888888888888888,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 1987.094999756664
+   },
+   {
+    "recipe": "citrus_shortbread_cookies",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 2013.8143999502063
+   },
+   {
+    "recipe": "coffee_oil_cupcakes",
+    "hallucinated": false,
+    "pantry_f1": 0.9411764705882353,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 2093.819400295615
+   },
+   {
+    "recipe": "flourless_chocolate_cake",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 1995.214099995792
+   },
+   {
+    "recipe": "date_energy_balls",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 2249.2038998752832
+   },
+   {
+    "recipe": "ghribia",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 1494.4163002073765
+   },
+   {
+    "recipe": "vanilla_ermine_frosting",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 1503.78239993006
+   },
+   {
+    "recipe": "harcha",
+    "hallucinated": false,
+    "pantry_f1": 0.9411764705882353,
+    "constraint_recall": null,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": false,
+    "narration_rejected": false,
+    "latency_ms": 1460.417500231415
+   },
+   {
+    "recipe": "coffee_layer_cake",
+    "hallucinated": false,
+    "pantry_f1": 1.0,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": true,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 1794.3579000420868
+   },
+   {
+    "recipe": "kalb_el_louz",
+    "hallucinated": false,
+    "pantry_f1": 0.9333333333333333,
+    "constraint_recall": 1.0,
+    "violation": false,
+    "shopping_exact": false,
+    "craving_match": true,
+    "narration_rejected": false,
+    "latency_ms": 6202.175400219858
+   }
+  ]
+ }
+}

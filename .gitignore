@@ -1,18 +1,26 @@
-# Dependencies
+# Dependencies and environments
 node_modules/
+.venv/
 
-# Builds and coverage
+# Builds
+dist/
 build/
-coverage/
+backend/static/
 
 # Python
 __pycache__/
 *.pyc
-.venv/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
 
-# Environment and editor files
+# Local data and secrets
+*.db
 .env
 .env.*.local
+backend/eval/run.log
+
+# Editors and tools
 .claude/
 .vscode/
 .idea/

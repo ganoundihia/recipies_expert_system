@@ -1,0 +1,9 @@
+**/node_modules
+**/.venv
+**/__pycache__
+**/*.db
+**/.env
+frontend/dist
+backend/eval/run.log
+.git
+.claude
