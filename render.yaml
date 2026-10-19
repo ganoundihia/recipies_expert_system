@@ -1,20 +1,22 @@
-# One-click deploy on Render (https://render.com): New > Blueprint > select this repository.
+# One-click deploy on Render: Dashboard > New > Blueprint > pick this repository.
+# The knowledge base lives in SQLite inside the container and is re-seeded from
+# backend/app/kb/data on every start, so the free plan needs no database.
+# For persistent console edits, attach a PostgreSQL database and set DATABASE_URL.
 services:
   - type: web
-    name: pantry-chef
+    name: nesychef
     runtime: docker
     plan: free
     healthCheckPath: /api/health
+    autoDeploy: true
     envVars:
+      - key: ENVIRONMENT
+        value: production
       - key: LLM_API_KEY
-        sync: false
+        sync: false            # paste your Groq key when Render asks for it
       - key: ADMIN_TOKEN
-        generateValue: true
-      - key: DATABASE_URL
-        fromDatabase:
-          name: pantry-chef-db
-          property: connectionString
-
-databases:
-  - name: pantry-chef-db
-    plan: free
+        generateValue: true    # read it in the service's Environment tab
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: DAILY_LLM_BUDGET
+        value: "300"

@@ -153,7 +153,11 @@ class ExpertSystem:
         rules = {rule.id: rule for rule in self.kb.rules}
         steps = []
         for firing in memory.firings:
-            steps.append(TraceStep(rule=firing.rule_id, text=firing.explain(rules[firing.rule_id], lang, lambda v: self.label(v, lang)), cf=round(firing.cf, 2)))
+            text = rules[firing.rule_id].explain.get(lang)
+            for name, value in firing.bindings:
+                # ?i is always an ingredient; other variables are vocabulary ("peanuts" the allergen, not the ingredient).
+                text = text.replace(name, self.label(value, lang) if name == "?i" else vocab_label(value, lang))
+            steps.append(TraceStep(rule=firing.rule_id, text=text, cf=round(firing.cf, 2)))
         return steps
 
     # --- Backward chaining: obtain(ingredient) ------------------------------

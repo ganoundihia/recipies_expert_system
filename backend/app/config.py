@@ -4,6 +4,7 @@ from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
+DEFAULT_ADMIN_TOKEN = "change-me-admin"
 
 
 class Settings(BaseSettings):
@@ -18,9 +19,19 @@ class Settings(BaseSettings):
     guard_threshold: float = 0.5
     llm_timeout: float = 30.0
 
-    database_url: str = f"sqlite:///{(BACKEND_DIR / 'pantry_chef.db').as_posix()}"
-    admin_token: str = "change-me-admin"
+    database_url: str = f"sqlite:///{(BACKEND_DIR / 'nesychef.db').as_posix()}"
+    admin_token: str = DEFAULT_ADMIN_TOKEN
     cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+    # "production" disables the knowledge console while the default admin token is in use.
+    environment: str = "development"
+    # Abuse protection for public deployments (0 disables a limit).
+    rate_limit_per_minute: int = 10
+    daily_llm_budget: int = 300
+
+    @property
+    def admin_enabled(self) -> bool:
+        return self.environment != "production" or self.admin_token != DEFAULT_ADMIN_TOKEN
 
 
 @lru_cache

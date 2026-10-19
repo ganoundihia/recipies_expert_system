@@ -25,7 +25,7 @@ from app.llm.client import LLMError, OpenAICompatibleClient
 from app.llm.fallback_parser import parse_keywords
 from app.llm.parser import dumps_compact
 from app.schemas import AskRequest, UserRequest
-from app.service import PantryChef
+from app.service import NeSyChef
 
 OUT = Path(__file__).parent / "results.json"
 
@@ -211,7 +211,7 @@ METRICS = {
 }
 
 
-def _run_one(name: str, chef: PantryChef, client: OpenAICompatibleClient, settings, kb: KnowledgeBase, expert: ExpertSystem, text: str, truth: UserRequest) -> dict:
+def _run_one(name: str, chef: NeSyChef, client: OpenAICompatibleClient, settings, kb: KnowledgeBase, expert: ExpertSystem, text: str, truth: UserRequest) -> dict:
     """Run one system on one case and judge it against the ground truth."""
     started, waited = time.perf_counter(), client.waited_s
     try:
@@ -245,7 +245,7 @@ def main() -> None:
     kb = load_seed_kb()
     expert = ExpertSystem(kb)
     client = OpenAICompatibleClient(settings.llm_base_url, settings.llm_api_key, timeout=90, max_retries=12)
-    chef = PantryChef(kb, settings, client)
+    chef = NeSyChef(kb, settings, client)
     truths = synthetic_requests(kb, args.cases, seed=args.seed)
     previous = json.loads(OUT.read_text(encoding="utf-8"))["cases_detail"] if OUT.exists() else {}
     results: dict[str, list[dict]] = {name: previous.get(name, []) if args.retry_errors or name not in selected else [] for name in ("llm_only", "rules_only", "hybrid")}
@@ -266,7 +266,7 @@ def main() -> None:
         "generated_at": datetime.now(UTC).isoformat(),
         "cases": len(truths),
         "models": {"llm_only": settings.narrate_model, "parse": settings.parse_model, "narrate": settings.narrate_model, "guard": settings.guard_model},
-        "system_labels": {"llm_only": "LLM only", "rules_only": "Rules only", "hybrid": "Hybrid (Pantry Chef)"},
+        "system_labels": {"llm_only": "LLM only", "rules_only": "Rules only", "hybrid": "Hybrid (NeSyChef)"},
         "systems": {name: summarize(records) for name, records in results.items()},
         "metrics": {key: {"label": label, "description": desc, "better": better, "format": fmt} for key, (label, desc, better, fmt) in METRICS.items()},
         "notes": [

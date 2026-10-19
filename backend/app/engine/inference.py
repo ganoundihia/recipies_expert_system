@@ -37,12 +37,6 @@ class Firing:
     cf: float
     bindings: tuple[tuple[str, str], ...]
 
-    def explain(self, rule: Rule, lang: str, label=lambda value: value) -> str:
-        text = rule.explain.get(lang)
-        for name, value in self.bindings:
-            text = text.replace(name, label(value))
-        return text
-
 
 @dataclass
 class WorkingMemory:

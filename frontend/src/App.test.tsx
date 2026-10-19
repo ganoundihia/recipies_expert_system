@@ -43,15 +43,21 @@ const askResponse = {
 }
 
 function mockFetch() {
-  return vi.fn(async (url: string) => {
-    const body = url.startsWith('/api/meta') ? meta : url.startsWith('/api/ask') ? askResponse : {}
+  return vi.fn(async (url: string, _init?: RequestInit) => {
+    const body = url.startsWith('/api/meta')
+      ? meta
+      : url.startsWith('/api/ask')
+        ? askResponse
+        : url.startsWith('/api/recommend')
+          ? { answer: 'Deterministic answer.', result: askResponse.result }
+          : {}
     return new Response(JSON.stringify(body), { status: 200, headers: { 'Content-Type': 'application/json' } })
   })
 }
 
-function renderApp() {
+function renderApp(path = '/') {
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[path]}>
       <AppProvider>
         <App />
       </AppProvider>
@@ -59,7 +65,7 @@ function renderApp() {
   )
 }
 
-describe('Pantry Chef UI', () => {
+describe('NeSyChef UI', () => {
   beforeEach(() => {
     sessionStorage.clear()
     vi.stubGlobal('fetch', mockFetch())
@@ -77,6 +83,28 @@ describe('Pantry Chef UI', () => {
     expect(screen.getByText(/Eid is traditionally celebrated/)).toBeInTheDocument()
     expect(screen.getByText(/dragon fruit/)).toBeInTheDocument()
     expect(screen.getByText(/avoid:sesame/)).toBeInTheDocument()
+  })
+
+  it('builds a structured request with the ingredient picker and sends it to the engine', async () => {
+    const fetchMock = mockFetch()
+    vi.stubGlobal('fetch', fetchMock)
+    renderApp()
+    await userEvent.click(screen.getByRole('button', { name: 'Or pick ingredients yourself' }))
+    await userEvent.type(await screen.findByRole('textbox', { name: 'Search an ingredient…' }), 'flour')
+    await userEvent.click(screen.getByRole('button', { name: '+ All-purpose flour' }))
+    await userEvent.click(screen.getByRole('button', { name: 'vegan' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Recommend' }))
+
+    expect(await screen.findByRole('heading', { name: 'Ghribia' })).toBeInTheDocument()
+    const call = fetchMock.mock.calls.find(([url]) => String(url).startsWith('/api/recommend'))!
+    const body = JSON.parse(call[1]!.body as string)
+    expect(body.pantry).toEqual([{ id: 'all_purpose_flour' }])
+    expect(body.diets).toEqual(['vegan'])
+  })
+
+  it('asks for a first request before planning', async () => {
+    renderApp('/planner')
+    expect(await screen.findByText(/Ask the assistant first/)).toBeInTheDocument()
   })
 
   it('switches to Arabic with right-to-left layout', async () => {

@@ -106,3 +106,34 @@ def test_safety_net_restores_constraints_the_llm_missed(tmp_path):
         out = client.post("/api/ask", json={"text": "عندي سميد وجلجلان. بنتي عندها حساسية من الجلجلان"}).json()
         assert "avoid:sesame" in out["safety_net"]
         assert "sesame" in out["request"]["avoid"] and "sesame_seeds" not in {p["id"] for p in out["request"]["pantry"]}
+
+
+def test_rate_limit_and_budget_degrade_gracefully(tmp_path):
+    def handler(model, messages, json_mode):
+        if model == "guard":
+            return "0.01"
+        return json.dumps({"lang": "en", "pantry": [{"name": "all_purpose_flour"}]}) if json_mode else "Answer."
+
+    settings = make_settings(tmp_path, guard_model="guard", rate_limit_per_minute=3, daily_llm_budget=1)
+    with TestClient(create_app(settings, client=FakeLLM(handler))) as client:
+        first = client.post("/api/ask", json={"text": "flour please"}).json()
+        second = client.post("/api/ask", json={"text": "flour please"}).json()
+        assert first["llm_used"] is True and second["llm_used"] is False  # budget spent: deterministic answer
+        assert second["answer"]["text"]
+        client.post("/api/ask", json={"text": "flour please"})
+        blocked = client.post("/api/ask", json={"text": "flour please"})
+        assert blocked.status_code == 429 and int(blocked.headers["retry-after"]) > 0
+
+
+def test_admin_disabled_in_production_with_default_token(tmp_path):
+    settings = make_settings(tmp_path, environment="production", admin_token="change-me-admin")
+    with TestClient(create_app(settings)) as client:
+        assert client.get("/api/admin/rules", headers={"X-Admin-Token": "change-me-admin"}).status_code == 403
+
+
+def test_paas_database_urls_use_psycopg3():
+    from app.db import normalize_database_url
+
+    assert normalize_database_url("postgres://u:p@h/db") == "postgresql+psycopg://u:p@h/db"
+    assert normalize_database_url("postgresql://u:p@h/db") == "postgresql+psycopg://u:p@h/db"
+    assert normalize_database_url("sqlite:///x.db") == "sqlite:///x.db"

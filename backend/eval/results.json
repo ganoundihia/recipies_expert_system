@@ -10,7 +10,7 @@
  "system_labels": {
   "llm_only": "LLM only",
   "rules_only": "Rules only",
-  "hybrid": "Hybrid (Pantry Chef)"
+  "hybrid": "Hybrid (NeSyChef)"
  },
  "systems": {
   "llm_only": {

@@ -23,7 +23,7 @@ export default function App() {
       <header className="topbar">
         <NavLink to="/" className="brand">
           <img src={whisk} alt="" />
-          Pantry Chef
+          NeSyChef
         </NavLink>
         <nav className="nav" aria-label="Main">
           <NavLink to="/" end>

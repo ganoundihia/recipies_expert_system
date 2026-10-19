@@ -4,11 +4,11 @@ services:
     environment:
       POSTGRES_USER: chef
       POSTGRES_PASSWORD: chef
-      POSTGRES_DB: pantry_chef
+      POSTGRES_DB: nesychef
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U chef -d pantry_chef"]
+      test: ["CMD-SHELL", "pg_isready -U chef -d nesychef"]
       interval: 5s
       retries: 10
 
@@ -17,7 +17,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql+psycopg://chef:chef@db:5432/pantry_chef
+      DATABASE_URL: postgresql+psycopg://chef:chef@db:5432/nesychef
       # LLM_API_KEY and ADMIN_TOKEN come from your shell or a .env file next to this compose file.
       LLM_API_KEY: ${LLM_API_KEY:-}
       ADMIN_TOKEN: ${ADMIN_TOKEN:-change-me-admin}

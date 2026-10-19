@@ -12,10 +12,11 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api import admin, routes
+from app.api.ratelimit import DailyBudget, SlidingWindowLimiter
 from app.config import Settings, get_settings
 from app.db import init_db, load_kb, make_engine, make_session_factory
 from app.llm.client import ChatModel
-from app.service import PantryChef
+from app.service import NeSyChef
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
@@ -29,11 +30,13 @@ def create_app(settings: Settings | None = None, client: ChatModel | None = None
         app.state.sessions = make_session_factory(engine)
         init_db(engine, app.state.sessions)
         with app.state.sessions() as session:
-            app.state.chef = PantryChef(load_kb(session), settings, client)
+            app.state.chef = NeSyChef(load_kb(session), settings, client)
         yield
         engine.dispose()
 
-    app = FastAPI(title="Pantry Chef API", version="2.0.0", lifespan=lifespan, description="Hybrid baking expert system: LLM for language, rules for decisions.")
+    app = FastAPI(title="NeSyChef API", version="2.0.0", lifespan=lifespan, description="Hybrid baking expert system: LLM for language, rules for decisions.")
+    app.state.limiter = SlidingWindowLimiter(settings.rate_limit_per_minute or 10**9)
+    app.state.llm_budget = DailyBudget(settings.daily_llm_budget)
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_methods=["*"], allow_headers=["*"])
     app.include_router(routes.router)
     app.include_router(admin.router)

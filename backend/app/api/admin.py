@@ -22,7 +22,10 @@ MODELS = {"rules": Rule, "substitutions": Substitution}
 
 
 def require_admin(request: Request, x_admin_token: str = Header(default="")) -> None:
-    expected = request.app.state.chef.settings.admin_token
+    settings = request.app.state.chef.settings
+    if not settings.admin_enabled:
+        raise HTTPException(403, "The knowledge console is disabled: set ADMIN_TOKEN to enable it.")
+    expected = settings.admin_token
     if not x_admin_token or not secrets.compare_digest(x_admin_token, expected):
         raise HTTPException(401, "Invalid admin token")
 

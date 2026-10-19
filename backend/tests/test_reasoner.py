@@ -109,3 +109,9 @@ def test_mining_finds_known_patterns(kb):
     assert ("vegetable_oil", "margarine") in subs and subs[("vegetable_oil", "margarine")]["kind"] == "substitution"
     assert ("vanilla_extract", "lemon_extract") in subs and subs[("vanilla_extract", "lemon_extract")]["kind"] == "variation"
     assert all(rule["lift"] > 1 for rule in mine_pairing_rules(kb))
+
+
+def test_trace_labels_allergens_and_ingredients_distinctly(expert):
+    texts = [step.text for step in expert.recommend(request("all_purpose_flour", avoid=["peanuts"])).trace]
+    assert "Peanuts contains peanuts, so it is forbidden." in texts
+    assert "You asked to avoid peanuts." in texts

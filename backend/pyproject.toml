@@ -1,5 +1,5 @@
 [project]
-name = "pantry-chef"
+name = "nesychef"
 version = "2.0.0"
 description = "Hybrid baking expert system: LLM for language, rules for decisions"
 requires-python = ">=3.11"

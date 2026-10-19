@@ -104,6 +104,7 @@ export interface IngredientInfo {
   unit: string
   allergens: string[]
   animal: boolean
+  staple?: boolean
 }
 
 export interface Meta {

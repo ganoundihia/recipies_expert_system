@@ -1,4 +1,4 @@
-"""PantryChef: the hybrid pipeline (guard -> parse -> expert system -> grounded narration)."""
+"""NeSyChef: the hybrid pipeline (guard -> parse -> expert system -> grounded narration)."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from app.schemas import AskRequest, UserRequest
 log = logging.getLogger(__name__)
 
 
-class PantryChef:
+class NeSyChef:
     def __init__(self, kb: KnowledgeBase, settings: Settings, client: ChatModel | None = None) -> None:
         self.settings = settings
         if client is None and settings.llm_api_key:
@@ -51,7 +51,9 @@ class PantryChef:
         log.info("Safety net added constraints the LLM missed: %s", added)
         return merged, added
 
-    def ask(self, ask: AskRequest) -> dict:
+    def ask(self, ask: AskRequest, use_llm: bool = True) -> dict:
+        """Run the pipeline; ``use_llm=False`` (e.g. daily budget spent) answers deterministically."""
+        client = self.client if use_llm else None
         timings: dict[str, float] = {}
         started = time.perf_counter()
 
@@ -60,15 +62,15 @@ class PantryChef:
             timings[stage] = round((now - since) * 1000)
             return now
 
-        guard = screen(self.client, self.settings.guard_model, ask.text, self.settings.guard_threshold)
+        guard = screen(client, self.settings.guard_model, ask.text, self.settings.guard_threshold)
         mark = lap("guard", started)
 
         parser = "keywords"
         unrecognized: list[str] = []
         safety_net: list[str] = []
-        if self.client is not None and not guard.flagged:
+        if client is not None and not guard.flagged:
             try:
-                request, unrecognized = parse_with_llm(self.client, self.settings.parse_model, ask.text, self.matcher)
+                request, unrecognized = parse_with_llm(client, self.settings.parse_model, ask.text, self.matcher)
                 request, safety_net = self._merge_safety_constraints(request, parse_keywords(ask.text, self.matcher))
                 parser = "llm"
             except LLMError as error:
@@ -82,13 +84,14 @@ class PantryChef:
         result = self.expert.recommend(request)
         mark = lap("reasoning", mark)
 
-        narration = narrate(None if guard.flagged else self.client, self.settings.narrate_model, result, self.expert, self.matcher, request)
+        narration = narrate(None if guard.flagged else client, self.settings.narrate_model, result, self.expert, self.matcher, request)
         lap("narration", mark)
         timings["total"] = round((time.perf_counter() - started) * 1000)
 
         return {
             "request": request.model_dump(),
             "parser": parser,
+            "llm_used": client is not None,
             "unrecognized": unrecognized,
             "safety_net": safety_net,
             "guard": guard.model_dump(),

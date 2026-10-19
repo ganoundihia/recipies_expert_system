@@ -42,7 +42,8 @@ def matcher(kb):
 
 
 def make_settings(tmp_path, **overrides) -> Settings:
-    return Settings(_env_file=None, llm_api_key="", database_url=f"sqlite:///{(tmp_path / 'test.db').as_posix()}", admin_token="secret", **overrides)
+    values = {"llm_api_key": "", "database_url": f"sqlite:///{(tmp_path / 'test.db').as_posix()}", "admin_token": "secret", **overrides}
+    return Settings(_env_file=None, **values)
 
 
 @pytest.fixture

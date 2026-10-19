@@ -27,7 +27,7 @@ export default function RequestBuilder({ value, onChange, onSubmit, busy }: { va
   const matches = useMemo(() => {
     if (!meta || !query.trim()) return []
     const q = query.trim().toLowerCase()
-    return meta.ingredients.filter((i) => !inPantry.has(i.id) && (i.name.toLowerCase().includes(q) || i.id.includes(q))).slice(0, 8)
+    return meta.ingredients.filter((i) => !i.staple && !inPantry.has(i.id) && (i.name.toLowerCase().includes(q) || i.id.includes(q))).slice(0, 8)
   }, [meta, query, inPantry])
 
   if (!meta) return null

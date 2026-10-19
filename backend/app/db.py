@@ -78,7 +78,16 @@ class AuditRow(Base):
     detail: Mapped[str] = mapped_column(Text, default="")
 
 
+def normalize_database_url(url: str) -> str:
+    """Render/Heroku give ``postgres://`` or ``postgresql://``; SQLAlchemy needs the psycopg 3 driver name."""
+    for prefix in ("postgres://", "postgresql://"):
+        if url.startswith(prefix):
+            return "postgresql+psycopg://" + url[len(prefix) :]
+    return url
+
+
 def make_engine(url: str) -> Engine:
+    url = normalize_database_url(url)
     connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
     return create_engine(url, connect_args=connect_args, pool_pre_ping=True)
 

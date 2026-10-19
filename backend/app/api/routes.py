@@ -8,6 +8,7 @@ import typing
 from fastapi import APIRouter, HTTPException, Request
 from sqlalchemy.orm import Session
 
+from app.api.ratelimit import enforce
 from app.config import BACKEND_DIR
 from app.db import TranslationRow
 from app.engine.planner import plan_bakes
@@ -15,13 +16,13 @@ from app.kb.labels import label
 from app.llm.narrator import template_answer
 from app.llm.translator import translate_steps
 from app.schemas import Allergen, AskRequest, Category, Cuisine, Diet, Flavor, Lang, Occasion, PlanRequest, ProveRequest, Skill, UserRequest, WhatIfRequest
-from app.service import PantryChef
+from app.service import NeSyChef
 
 router = APIRouter(prefix="/api")
 EVAL_RESULTS = BACKEND_DIR / "eval" / "results.json"
 
 
-def chef(request: Request) -> PantryChef:
+def chef(request: Request) -> NeSyChef:
     return request.app.state.chef
 
 
@@ -29,7 +30,7 @@ def db(request: Request) -> Session:
     return request.app.state.sessions()
 
 
-def _check_ingredients(c: PantryChef, ids: typing.Iterable[str]) -> None:
+def _check_ingredients(c: NeSyChef, ids: typing.Iterable[str]) -> None:
     unknown = sorted(set(ids) - set(c.kb.ingredients))
     if unknown:
         raise HTTPException(422, f"Unknown ingredient ids: {', '.join(unknown)}")
@@ -55,9 +56,8 @@ def meta(request: Request, lang: Lang = "en") -> dict:
         **{key: [{"id": v, "label": label(v, lang)} for v in typing.get_args(kind)] for key, kind in vocab.items()},
         "difficulties": [{"id": d, "label": label(d, lang)} for d in ("easy", "medium", "hard")],
         "ingredients": [
-            {"id": i.id, "name": i.name.get(lang), "category": i.category, "unit": i.unit, "allergens": i.allergens, "animal": i.animal}
+            {"id": i.id, "name": i.name.get(lang), "category": i.category, "unit": i.unit, "allergens": i.allergens, "animal": i.animal, "staple": i.staple}
             for i in sorted(c.kb.ingredients.values(), key=lambda i: i.name.get(lang))
-            if not i.staple
         ],
         "llm": c.llm_enabled,
     }
@@ -85,10 +85,13 @@ def get_recipe(request: Request, recipe_id: str, lang: Lang = "en", servings: in
             cached = session.get(TranslationRow, key)
             if cached and len(cached.steps) == len(recipe.steps):
                 steps, translated = cached.steps, True
-            elif (result := translate_steps(c.client, c.settings.parse_model, recipe.steps, lang)) is not None:
-                session.merge(TranslationRow(key=key, steps=result))
-                session.commit()
-                steps, translated = result, True
+            else:
+                # Only a cache miss costs an LLM call, so only that path is rate limited and budgeted.
+                enforce(request.app.state.limiter, request)
+                if request.app.state.llm_budget.consume() and (result := translate_steps(c.client, c.settings.parse_model, recipe.steps, lang)) is not None:
+                    session.merge(TranslationRow(key=key, steps=result))
+                    session.commit()
+                    steps, translated = result, True
     ingredients = [
         {"id": item.id, "name": c.kb.ingredients[item.id].name.get(lang), "qty": round(item.qty * scale, 1), "unit": c.kb.ingredients[item.id].unit, "optional": item.optional}
         for item in recipe.ingredients
@@ -119,7 +122,10 @@ def recommend(request: Request, body: UserRequest) -> dict:
 
 @router.post("/ask")
 def ask(request: Request, body: AskRequest) -> dict:
-    return chef(request).ask(body)
+    enforce(request.app.state.limiter, request)
+    c = chef(request)
+    # Once the daily LLM budget is spent the assistant keeps working, deterministically.
+    return c.ask(body, use_llm=c.llm_enabled and request.app.state.llm_budget.consume())
 
 
 @router.post("/prove")

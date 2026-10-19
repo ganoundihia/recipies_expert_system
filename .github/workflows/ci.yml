@@ -46,4 +46,4 @@ jobs:
     needs: [backend, frontend]
     steps:
       - uses: actions/checkout@v4
-      - run: docker build -t pantry-chef .
+      - run: docker build -t nesychef .
